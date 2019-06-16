@@ -195,20 +195,33 @@ public class WeatherActivity extends Activity implements Serializable {
 
         tv_hour.setText(time + "时");
 //        iv_weather.setImageResource(getResources().getIdentifier("cond_icon_"+ bean.getWeather_id() , "drawable-hdpi", "com.juhe.weather"));
+
+        /*通过反射的方式获得资源id*/
+        int id = -1;  //资源id
         try {
-            Field field = R.drawable.class.getField("d00");
-            int id = field.getInt(null);
-            System.out.println("id="+id);
+            Field field = R.drawable.class.getField("cond_icon_"+bean.getWeather_id());
+            id = field.getInt(null);
         } catch (Exception e) {
             e.printStackTrace();
         }
-        iv_weather.setImageResource(getResources().getIdentifier("cond_icon_"+bean.getWeather_id() , "drawable", "com.juhe.weather"));
+
+        iv_weather.setImageResource(id);
         tv_temp.setText(bean.getTemp() + "°");
     }
 
     public void setFutureData(TextView tv_week, ImageView iv_weather, TextView tv_temp_a, TextView tv_temp_b, FutureWeatherBean bean) {
         tv_week.setText(bean.getWeek());
-        iv_weather.setImageResource(getResources().getIdentifier("d" + bean.getWeather_id(), "drawable", "com.juhe.weather"));
+
+        /**通过反射的方式获得资源id*/
+        int id = -1;  //资源id
+        try {
+            Field field = R.drawable.class.getField("d" + bean.getWeather_id());
+            id = field.getInt(null);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        iv_weather.setImageResource(id);
         String[] tempArr = bean.getTemp().split("~");
         String temp_str_a = tempArr[1].substring(0, tempArr[1].indexOf("℃"));
         String temp_str_b = tempArr[0].substring(0, tempArr[0].indexOf("℃"));
