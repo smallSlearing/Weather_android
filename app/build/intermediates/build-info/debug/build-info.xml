@@ -5,30 +5,27 @@
     build-mode="COLD"
     density="xxhdpi"
     format="10"
-    ir-eligibility="R_CLASS_CHANGE"
+    ir-eligibility="REFLECTION_USED"
     plugin-version="3.2.1"
-    timestamp="1560317833541"
+    timestamp="1560677988764"
     token="-2572792386327586508"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="3200" />
+        duration="732" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="93" />
+        duration="41" />
     <task
         name="verifier"
-        duration="69" />
+        duration="32" />
 
     <artifact
         location="C:\Users\Administrator\Desktop\Weather1(1)\Weather1\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
-        type="SPLIT" />
-    <artifact
-        location="C:\Users\Administrator\Desktop\Weather1(1)\Weather1\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
         type="SPLIT" />
     <artifact
         location="C:\Users\Administrator\Desktop\Weather1(1)\Weather1\app\build\intermediates\instant-run-apk\debug\app-debug.apk"
@@ -36,13 +33,10 @@
 
     <build
         build-mode="FULL"
-        timestamp="1560317206462"
+        timestamp="1560677035538"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="C:\Users\Administrator\Desktop\Weather1(1)\Weather1\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
-            type="SPLIT" />
-        <artifact
-            location="C:\Users\Administrator\Desktop\Weather1(1)\Weather1\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
             type="SPLIT" />
         <artifact
             location="C:\Users\Administrator\Desktop\Weather1(1)\Weather1\app\build\intermediates\instant-run-apk\debug\app-debug.apk"
@@ -57,10 +51,10 @@
             location="C:\Users\Administrator\Desktop\Weather1(1)\Weather1\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\Administrator\Desktop\Weather1(1)\Weather1\app\build\intermediates\split-apk\debug\dep\dependencies.apk"
+            location="C:\Users\Administrator\Desktop\Weather1(1)\Weather1\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\Administrator\Desktop\Weather1(1)\Weather1\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
+            location="C:\Users\Administrator\Desktop\Weather1(1)\Weather1\app\build\intermediates\split-apk\debug\dep\dependencies.apk"
             type="SPLIT" />
         <artifact
             location="C:\Users\Administrator\Desktop\Weather1(1)\Weather1\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
@@ -74,17 +68,26 @@
         <artifact
             location="C:\Users\Administrator\Desktop\Weather1(1)\Weather1\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
             type="SPLIT" />
+        <artifact
+            location="C:\Users\Administrator\Desktop\Weather1(1)\Weather1\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
+            type="SPLIT" />
     </build>
     <build
         build-mode="COLD"
-        ir-eligibility="R_CLASS_CHANGE"
-        timestamp="1560317833541"
+        ir-eligibility="REFLECTION_USED"
+        timestamp="1560677945936"
+        verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="C:\Users\Administrator\Desktop\Weather1(1)\Weather1\app\build\intermediates\instant-run-apk\debug\app-debug.apk"
+            type="SPLIT_MAIN" />
+    </build>
+    <build
+        build-mode="COLD"
+        ir-eligibility="REFLECTION_USED"
+        timestamp="1560677988764"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="C:\Users\Administrator\Desktop\Weather1(1)\Weather1\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
-            type="SPLIT" />
-        <artifact
-            location="C:\Users\Administrator\Desktop\Weather1(1)\Weather1\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
             type="SPLIT" />
         <artifact
             location="C:\Users\Administrator\Desktop\Weather1(1)\Weather1\app\build\intermediates\instant-run-apk\debug\app-debug.apk"

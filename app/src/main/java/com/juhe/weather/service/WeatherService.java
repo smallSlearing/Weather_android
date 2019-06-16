@@ -17,6 +17,7 @@ import android.content.Intent;
 import android.os.Binder;
 import android.os.Handler;
 import android.os.IBinder;
+import android.os.Looper;
 import android.os.Message;
 import android.util.Log;
 import android.widget.Toast;
@@ -210,6 +211,10 @@ public class WeatherService extends Service {
 					JSONObject cityWeather = jsonObject.getJSONObject("cityWeather");
 					weatherBean = parserWeather(cityWeather);
 					countDownLatch.countDown();
+
+
+					JSONObject hoursWeather = jsonObject.getJSONObject("hoursWeather").getJSONArray("HeWeather6").getJSONObject(0);
+					list = parserForecast3h(hoursWeather);
 					countDownLatch.countDown();
 //					weatherActivity.setWeatherViews(weatherBean);
 //			if (weatherBean != null) {
@@ -319,23 +324,25 @@ public class WeatherService extends Service {
 	// 解析3小时预报
 	private List<HoursWeatherBean> parserForecast3h(JSONObject json) {
 		List<HoursWeatherBean> list = null;
-		SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMddhhmmss");
+		//定义日期转化的格式
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd hh:mm");
 		Date date = new Date(System.currentTimeMillis());
+
 		try {
-			int code = json.getInt("resultcode");
-			int error_code = json.getInt("error_code");
-			if (error_code == 0 && code == 200) {
+			String status = json.getString("status");	//获得查询结果状态,ok为成功
+
+			if ("ok".equals(status)) {
 				list = new ArrayList<HoursWeatherBean>();
-				JSONArray resultArray = json.getJSONArray("result");
+				JSONArray resultArray = json.getJSONArray("hourly");
 				for (int i = 0; i < resultArray.length(); i++) {
 					JSONObject hourJson = resultArray.getJSONObject(i);
-					Date hDate = sdf.parse(hourJson.getString("sfdate"));
+					Date hDate = sdf.parse(hourJson.getString("time"));
 					if (!hDate.after(date)) {
 						continue;
 					}
 					HoursWeatherBean bean = new HoursWeatherBean();
-					bean.setWeather_id(hourJson.getString("weatherid"));
-					bean.setTemp(hourJson.getString("temp1"));
+					bean.setWeather_id(hourJson.getString("cond_code"));
+					bean.setTemp(hourJson.getString("tmp"));
 					Calendar c = Calendar.getInstance();
 					c.setTime(hDate);
 					bean.setTime(c.get(Calendar.HOUR_OF_DAY) + "");

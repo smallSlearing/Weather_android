@@ -1,6 +1,7 @@
 package com.juhe.weather;
 
 import java.io.Serializable;
+import java.lang.reflect.Field;
 import java.util.Calendar;
 import java.util.List;
 
@@ -191,14 +192,17 @@ public class WeatherActivity extends Activity implements Serializable {
 
         String prefixStr = null;
         int time = Integer.valueOf(bean.getTime());
-        if (time >= 6 && time < 18) {
-            prefixStr = "d";
-        } else {
-            prefixStr = "n";
-        }
 
-        tv_hour.setText(bean.getTime() + "时");
-        iv_weather.setImageResource(getResources().getIdentifier(prefixStr + bean.getWeather_id(), "drawable", "com.juhe.weather"));
+        tv_hour.setText(time + "时");
+//        iv_weather.setImageResource(getResources().getIdentifier("cond_icon_"+ bean.getWeather_id() , "drawable-hdpi", "com.juhe.weather"));
+        try {
+            Field field = R.drawable.class.getField("d00");
+            int id = field.getInt(null);
+            System.out.println("id="+id);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        iv_weather.setImageResource(getResources().getIdentifier("cond_icon_"+bean.getWeather_id() , "drawable", "com.juhe.weather"));
         tv_temp.setText(bean.getTemp() + "°");
     }
 
@@ -287,7 +291,6 @@ public class WeatherActivity extends Activity implements Serializable {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         // TODO Auto-generated method stub
-
         if (requestCode == 1 && resultCode == 1) {
             String city = data.getStringExtra("city");
             mService.getCityWeather(city);
