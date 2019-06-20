@@ -512,6 +512,112 @@
                         android:paddingLeft="16dp" />
                 </LinearLayout>
             </LinearLayout>
+
+
+            <!--今日资讯-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/wireframe_dark"
+                android:id="@+id/li_news"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:text="@string/newes"
+                    android:textColor="@color/dark_grey" />
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/light_grey" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="8dp" >
+
+                    <TextView
+                        android:id="@+id/tv_news1"
+                        style="@style/TextViewStyle"
+                        android:gravity="left"
+                        android:paddingLeft="16dp"
+                        android:text="aaaaaaaa"
+                        />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/light_grey" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="8dp" >
+
+                    <TextView
+                        android:id="@+id/tv_news2"
+                        style="@style/TextViewStyle"
+                        android:gravity="left"
+                        android:paddingLeft="16dp"
+                        android:text="aaaaaaaa"
+                        />
+
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/light_grey" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="8dp" >
+
+                    <TextView
+                        android:id="@+id/tv_news3"
+                        style="@style/TextViewStyle"
+                        android:gravity="left"
+                        android:paddingLeft="16dp"
+                        android:text="aaaaaaaa"
+                        />
+
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/light_grey" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="8dp" >
+                    <TextView
+                        android:id="@+id/tv_news4"
+                        style="@style/TextViewStyle"
+                        android:gravity="left"
+                        android:paddingLeft="16dp"
+                        android:text="bbbbbbbbb"
+                        />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/light_grey" />
+
+                </LinearLayout>
         </LinearLayout>
     </com.juhe.weather.swiperefresh.PullToRefreshScrollView>
 

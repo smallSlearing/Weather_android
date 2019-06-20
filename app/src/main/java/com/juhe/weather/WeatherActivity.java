@@ -15,12 +15,14 @@ import android.os.IBinder;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
 import com.juhe.weather.bean.FutureWeatherBean;
 import com.juhe.weather.bean.HoursWeatherBean;
+import com.juhe.weather.bean.NewsBean;
 import com.juhe.weather.bean.PMBean;
 import com.juhe.weather.bean.WeatherBean;
 import com.juhe.weather.service.WeatherService;
@@ -68,7 +70,11 @@ public class WeatherActivity extends Activity implements Serializable {
             tv_fourthday_temp_b,// 第四天温度b
             tv_humidity,// 湿度
             tv_wind, tv_uv_index,// 紫外线指数
-            tv_dressing_index;// 穿衣指数
+            tv_dressing_index,// 穿衣指数
+            tv_news1,  //第一条新闻
+            tv_news2,   //第二条新闻
+            tv_news3, //第三条新闻
+            tv_news4;//第四条新闻
 
     private ImageView iv_now_weather,// 现在
             iv_next_three,// 3小时
@@ -82,6 +88,10 @@ public class WeatherActivity extends Activity implements Serializable {
             iv_fourthday_weather;// 第四天
 
     private RelativeLayout rl_city;
+
+    private LinearLayout li_news;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -115,7 +125,7 @@ public class WeatherActivity extends Activity implements Serializable {
             mService.setCallBack(new OnParserCallBack() {
 
                 @Override
-                public void OnParserComplete(List<HoursWeatherBean> list, PMBean pmBean, WeatherBean weatherBean) {
+                public void OnParserComplete(List<HoursWeatherBean> list, PMBean pmBean, WeatherBean weatherBean , List<NewsBean> newsList) {
                     // TODO Auto-generated method stub
                     mPullToRefreshScrollView.onRefreshComplete();
                     if (list != null && list.size() >= 5) {
@@ -128,6 +138,10 @@ public class WeatherActivity extends Activity implements Serializable {
 
                     if (weatherBean != null) {
                         setWeatherViews(weatherBean);
+                    }
+
+                    if (newsList != null && newsList.size() != 0) {
+                        setNewsView(newsList);
                     }
                 }
             });
@@ -181,12 +195,22 @@ public class WeatherActivity extends Activity implements Serializable {
     }
 
     private void setHourViews(List<HoursWeatherBean> list) {
+
         setHourData(tv_next_three, iv_next_three, tv_next_three_temp, list.get(0));
         setHourData(tv_next_six, iv_next_six, tv_next_six_temp, list.get(1));
         setHourData(tv_next_nine, iv_next_nine, tv_next_nine_temp, list.get(2));
         setHourData(tv_next_twelve, iv_next_twelve, tv_next_twelve_temp, list.get(3));
         setHourData(tv_next_fifteen, iv_next_fifteen, tv_next_fifteen_temp, list.get(4));
     }
+
+    //设置新闻列表
+    private void setNewsView(List<NewsBean> newsList) {
+        tv_news1.setText(newsList.get(0).getTitle());
+        tv_news2.setText(newsList.get(1).getTitle());
+        tv_news3.setText(newsList.get(2).getTitle());
+        tv_news4.setText(newsList.get(3).getTitle());
+    }
+
 
     public void setHourData(TextView tv_hour, ImageView iv_weather, TextView tv_temp, HoursWeatherBean bean) {
 
@@ -256,6 +280,20 @@ public class WeatherActivity extends Activity implements Serializable {
             }
         });
 
+        /*设置今日资讯跳转*/
+        li_news = (LinearLayout) findViewById(R.id.li_news);
+        li_news.setOnClickListener(new OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                // TODO Auto-generated method stub
+                startActivity(new Intent(mContext, NewsActivity.class));
+
+            }
+        });
+
+
+
         tv_city = (TextView) findViewById(R.id.tv_city);
         tv_release = (TextView) findViewById(R.id.tv_release);
         tv_now_weather = (TextView) findViewById(R.id.tv_now_weather);
@@ -288,6 +326,11 @@ public class WeatherActivity extends Activity implements Serializable {
         tv_wind = (TextView) findViewById(R.id.tv_wind);
         tv_uv_index = (TextView) findViewById(R.id.tv_uv_index);
         tv_dressing_index = (TextView) findViewById(R.id.tv_dressing_index);
+        tv_news1 = (TextView) findViewById(R.id.tv_news1);
+        tv_news2 = (TextView) findViewById(R.id.tv_news2);
+        tv_news3 = (TextView) findViewById(R.id.tv_news3);
+        tv_news4 = (TextView) findViewById(R.id.tv_news4);
+
 
         iv_now_weather = (ImageView) findViewById(R.id.iv_now_weather);
         iv_next_three = (ImageView) findViewById(R.id.iv_next_three);

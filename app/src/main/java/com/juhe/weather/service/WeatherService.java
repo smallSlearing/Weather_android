@@ -25,6 +25,7 @@ import android.widget.Toast;
 import com.juhe.weather.WeatherActivity;
 import com.juhe.weather.bean.FutureWeatherBean;
 import com.juhe.weather.bean.HoursWeatherBean;
+import com.juhe.weather.bean.NewsBean;
 import com.juhe.weather.bean.PMBean;
 import com.juhe.weather.bean.WeatherBean;
 import com.thinkland.juheapi.common.JsonCallBack;
@@ -42,6 +43,7 @@ public class WeatherService extends Service {
 	private WeatherServiceBinder binder = new WeatherServiceBinder();
 	private boolean isRunning = false;
 	private List<HoursWeatherBean> list;
+	private List<NewsBean> newsList;
 	private PMBean pmBean;
 	private WeatherBean weatherBean;
 	private OnParserCallBack callBack;
@@ -53,7 +55,7 @@ public class WeatherService extends Service {
 	private WeatherActivity weatherActivity;
 
 	public interface OnParserCallBack {
-		public void OnParserComplete(List<HoursWeatherBean> list, PMBean pmBean, WeatherBean weatherBean);
+		public void OnParserComplete(List<HoursWeatherBean> list, PMBean pmBean, WeatherBean weatherBean , List<NewsBean> list2);
 	}
 
 	@Override
@@ -93,7 +95,7 @@ public class WeatherService extends Service {
 				break;
 			case CALLBACK_OK:
 				if (callBack != null) {
-					callBack.OnParserComplete(list, pmBean, weatherBean);
+					callBack.OnParserComplete(list, pmBean, weatherBean , newsList);
 				}
 				isRunning = false;
 				break;
@@ -150,50 +152,7 @@ public class WeatherService extends Service {
 		}
 		isRunning = true;
 		final CountDownLatch countDownLatch = new CountDownLatch(3);
-//		WeatherData data = WeatherData.getInstance();
 
-//		data.getByCitys(city, 2, new JsonCallBack() {
-//
-//			@Override
-//			public void jsonLoaded(JSONObject arg0) {
-//				// TODO Auto-generated method stub
-//
-//				weatherBean = new WeatherBean();
-//
-//				countDownLatch.countDown();
-//				// if (weatherBean != null) {
-////				 setWeatherViews(bean);
-//				// }
-//
-//			}
-//		});
-
-//		data.getForecast3h(city, new JsonCallBack() {
-//
-//			@Override
-//			public void jsonLoaded(JSONObject arg0) {
-//				// TODO Auto-generated method stub
-//				list = parserForecast3h(arg0);
-//				countDownLatch.countDown();
-//				// if (list != null && list.size() >= 5) {
-//				// setHourViews(list);
-//				// }
-//			}
-//		});
-
-//		AirData airData = AirData.getInstance();
-//		airData.cityAir(city, new JsonCallBack() {
-//
-//			@Override
-//			public void jsonLoaded(JSONObject arg0) {
-//				// TODO Auto-generated method stub
-//				countDownLatch.countDown();
-//				pmBean = parserPM(arg0);
-//				// if (pmBean != null) {
-//				// setPMView(bean);
-//				// }
-//			}
-//		});
 		new Thread(){
 			@Override
 			public void run() {
@@ -216,10 +175,7 @@ public class WeatherService extends Service {
 					JSONObject hoursWeather = jsonObject.getJSONObject("hoursWeather").getJSONArray("HeWeather6").getJSONObject(0);
 					list = parserForecast3h(hoursWeather);
 					countDownLatch.countDown();
-//					weatherActivity.setWeatherViews(weatherBean);
-//			if (weatherBean != null) {
-//				 setWeatherViews(bean);
-//			}
+
 
 					JSONObject pm = jsonObject.getJSONObject("pm");
 					countDownLatch.countDown();
@@ -227,7 +183,9 @@ public class WeatherService extends Service {
 //					weatherActivity.setPMView(pmBean);
 					System.out.println("pm="+pm);
 
-//       parseXMLWithSAX（responseData）；
+					JSONArray jsonArray = jsonObject.getJSONArray("news");
+					newsList = parserNews(jsonArray);
+
 				}catch(Exception e){
 					e.printStackTrace();
 				}
@@ -320,6 +278,29 @@ public class WeatherService extends Service {
 		return bean;
 
 	}
+
+	// 解析新闻列表
+	private List<NewsBean> parserNews(JSONArray jsonArr) {
+		List<NewsBean> newsBeanList2 = null;
+
+		try {
+			newsBeanList2 = new ArrayList<>();
+			for (int i = 0; i < jsonArr.length(); i++) {
+				NewsBean newsBean = new NewsBean();
+				JSONObject newsJson = jsonArr.getJSONObject(i);
+				newsBean.setTitle(newsJson.getString("title"));
+
+				newsBeanList2.add(newsBean);
+			}
+
+		} catch (JSONException e) {
+			e.printStackTrace();
+		}
+
+		return newsBeanList2;
+
+	}
+
 
 	// 解析3小时预报
 	private List<HoursWeatherBean> parserForecast3h(JSONObject json) {
