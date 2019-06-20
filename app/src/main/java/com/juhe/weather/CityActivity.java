@@ -18,6 +18,8 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
+import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.ListView;
 
 import com.juhe.weather.adapter.CityListAdatper;
@@ -31,7 +33,11 @@ import okhttp3.Response;
 public class CityActivity extends Activity {
 	private final int UPDATE_VIEW = 5;
 	private ListView lv_city;
-	private List<String> list;
+	private List<String> list;	//具有符合条件的列表
+	private List<String> allEleList;	//具有所有数据的列表
+	EditText et_content;	//搜索框的对象
+	ImageView iv_search;     //搜索按钮对象
+	CityListAdatper adatper;  //城市适配器
 	JSONObject json = null;
 	private Handler hd = new MyHandler();
 
@@ -43,6 +49,26 @@ public class CityActivity extends Activity {
 		initViews();
 		getCities();
 
+		et_content = (EditText) findViewById(R.id.search);
+		iv_search = (ImageView)findViewById(R.id.search_button);
+		/*处理搜索城市*/
+		iv_search.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				String content = et_content.getText().toString().trim();
+				list.clear();//清空列表
+
+				for (String s:allEleList) {	//查找所有符合条件的城市
+					if(s.indexOf(content) >= 0){
+						list.add(s);
+					}
+				}
+
+				adatper.notifyDataSetChanged();
+			}
+		});
+
+		
 	}
 
 	private void initViews() {
@@ -100,6 +126,8 @@ public class CityActivity extends Activity {
 					if (error_code == 0 && code == 200) {
 
 						list = new ArrayList<String>();
+						allEleList = new ArrayList<>();
+
 						JSONArray resultArray = json.getJSONArray("result");
 						Set<String> citySet = new HashSet<String>();
 						for (int i = 0; i < resultArray.length(); i++) {
@@ -107,8 +135,11 @@ public class CityActivity extends Activity {
 							city = city +" "+resultArray.getJSONObject(i).getString("district");
 							citySet.add(city);
 						}
-						list.addAll(citySet);
-						CityListAdatper adatper = new CityListAdatper(CityActivity.this, list);
+
+						allEleList.addAll(citySet);
+						list.addAll(allEleList);
+
+						adatper = new CityListAdatper(CityActivity.this, list);
 						lv_city.setAdapter(adatper);
 						lv_city.setOnItemClickListener(new OnItemClickListener() {
 
