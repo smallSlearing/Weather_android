@@ -5464,12 +5464,11 @@ public final class R {
     public static final int notification_tile_bg=0x7f070108;
     public static final int notify_panel_notification_icon_bg=0x7f070109;
     public static final int progressbar=0x7f07010a;
-    public static final int search=0x7f07010b;
-    public static final int search_clear=0x7f07010c;
-    public static final int tooltip_frame_dark=0x7f07010d;
-    public static final int tooltip_frame_light=0x7f07010e;
-    public static final int wireframe_dark=0x7f07010f;
-    public static final int wireframe_light=0x7f070110;
+    public static final int search_clear=0x7f07010b;
+    public static final int tooltip_frame_dark=0x7f07010c;
+    public static final int tooltip_frame_light=0x7f07010d;
+    public static final int wireframe_dark=0x7f07010e;
+    public static final int wireframe_light=0x7f07010f;
   }
   public static final class id {
     public static final int ALT=0x7f080000;

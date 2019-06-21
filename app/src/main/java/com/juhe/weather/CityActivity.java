@@ -48,29 +48,14 @@ public class CityActivity extends Activity {
         // TODO Auto-generated method stub
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_city);
-        initViews();
-        getCities();
+
 
         et_content = (EditText) findViewById(R.id.search);
         iv_search = (ImageView)findViewById(R.id.search_but);
-		/*处理搜索城市*/
-        iv_search.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String content = et_content.getText().toString().trim();
-                list.clear();//清空列表
-
-                for (String s:allEleList) {	//查找所有符合条件的城市
-                    if(s.indexOf(content) >= 0){
-                        list.add(s);
-                    }
-                }
-
-                adatper.notifyDataSetChanged();
-            }
-        });
 
 
+        initViews();
+        getCities();
     }
 
     private void initViews() {
@@ -85,6 +70,9 @@ public class CityActivity extends Activity {
 
         lv_city = (ListView) findViewById(R.id.lv_city);
         search_clear = findViewById(R.id.search_clear);//清除图片
+
+
+        /**给取消按钮设置监听器，用来处理点击取消按钮的时候，删除搜索框的内容**/
         search_clear.setOnClickListener(new View.OnClickListener(){//点击删除图片，文本编辑框清空，清空图片隐藏
             @Override
             public void onClick(View v) {
@@ -94,6 +82,7 @@ public class CityActivity extends Activity {
             }
         });
 
+        /*给搜索框设置点击监听器，用来控制显示和隐藏取消按钮*/
         et_content.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -113,6 +102,24 @@ public class CityActivity extends Activity {
             @Override
             public void afterTextChanged(Editable s) {
 
+            }
+        });
+
+
+        /*给搜索按钮设置点击监听器，用来处理搜索城市*/
+        iv_search.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String content = et_content.getText().toString().trim();
+                list.clear();//清空列表
+
+                for (String s:allEleList) {	//查找所有符合条件的城市
+                    if(s.indexOf(content) >= 0){
+                        list.add(s);
+                    }
+                }
+
+                adatper.notifyDataSetChanged();
             }
         });
     }

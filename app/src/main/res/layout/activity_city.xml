@@ -52,7 +52,7 @@
             android:layout_centerVertical="true"
             android:layout_toRightOf="@+id/search_layout"
             android:layout_marginLeft="25dp"
-            android:src="@drawable/search"
+            android:src="@drawable/ic_search"
             />
 
         <View

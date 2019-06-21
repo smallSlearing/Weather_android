@@ -1,239 +1,239 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\android\Android_Studio_workplace\weather_android\app\src\main\AndroidManifest.xml:2:1-55:12
-INJECTED from D:\android\Android_Studio_workplace\weather_android\app\src\main\AndroidManifest.xml:2:1-55:12
-INJECTED from D:\android\Android_Studio_workplace\weather_android\app\src\main\AndroidManifest.xml:2:1-55:12
-INJECTED from D:\android\Android_Studio_workplace\weather_android\app\src\main\AndroidManifest.xml:2:1-55:12
-MERGED from [com.android.support:design:28.0.0] C:\Users\52249\.gradle\caches\transforms-1\files-1.1\design-28.0.0.aar\91495634eb8179b76155c89dd007b404\AndroidManifest.xml:17:1-24:12
-MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\52249\.gradle\caches\transforms-1\files-1.1\appcompat-v7-28.0.0.aar\94bf185858fbbecba6cbc9694c0a79cb\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\52249\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\6bc80939061b80cd6ea1e7a38c46db1d\AndroidManifest.xml:2:1-11:12
-MERGED from [de.hdodenhof:circleimageview:2.1.0] C:\Users\52249\.gradle\caches\transforms-1\files-1.1\circleimageview-2.1.0.aar\a3775441b7b47c81cc902077ab8253c7\AndroidManifest.xml:2:1-11:12
-MERGED from [com.android.support:recyclerview-v7:28.0.0] C:\Users\52249\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-28.0.0.aar\b3d8aaa668210569649079342c60c2b1\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:cardview-v7:28.0.0] C:\Users\52249\.gradle\caches\transforms-1\files-1.1\cardview-v7-28.0.0.aar\7aa858127066904d1bf0a0aa65820f71\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\52249\.gradle\caches\transforms-1\files-1.1\support-fragment-28.0.0.aar\8535b861364adb2f4ac1b2b29e25f93d\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\52249\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-28.0.0.aar\729e3c8b4e16e7743c04281e3767bf91\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\52249\.gradle\caches\transforms-1\files-1.1\support-core-ui-28.0.0.aar\71a0b6a4b2629bfd98f37380306d29fc\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\52249\.gradle\caches\transforms-1\files-1.1\support-core-utils-28.0.0.aar\7de766058a15ee1bc1628e4cd5b25b30\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\52249\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-28.0.0.aar\94f9ea7d17adf7e6b32fd503aaf2ff7c\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:transition:28.0.0] C:\Users\52249\.gradle\caches\transforms-1\files-1.1\transition-28.0.0.aar\4030b6c7dc4c060da674cee5398815a0\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:loader:28.0.0] C:\Users\52249\.gradle\caches\transforms-1\files-1.1\loader-28.0.0.aar\dce58fc084de6a67fa9687ec5784860c\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:viewpager:28.0.0] C:\Users\52249\.gradle\caches\transforms-1\files-1.1\viewpager-28.0.0.aar\bfcb576f703504a2bfed78e7bb381bb0\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\52249\.gradle\caches\transforms-1\files-1.1\coordinatorlayout-28.0.0.aar\fff3feba2ed2344cc407e0ff91146847\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\52249\.gradle\caches\transforms-1\files-1.1\drawerlayout-28.0.0.aar\8529df7172d6d737aef78a7d2bb6fff7\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\52249\.gradle\caches\transforms-1\files-1.1\slidingpanelayout-28.0.0.aar\ce58f95bf348fcf56878f2651b43a6df\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:customview:28.0.0] C:\Users\52249\.gradle\caches\transforms-1\files-1.1\customview-28.0.0.aar\cc80f89a7adba24c40f9efdc9aac6f1a\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\52249\.gradle\caches\transforms-1\files-1.1\swiperefreshlayout-28.0.0.aar\b04e71b1c4546166fa99fe57ac919821\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\52249\.gradle\caches\transforms-1\files-1.1\asynclayoutinflater-28.0.0.aar\a5759169eb2cff9822f44c6eb427dc05\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-compat:28.0.0] C:\Users\52249\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\99df066629b15ca560e02b9b20879dd4\AndroidManifest.xml:17:1-24:12
-MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\52249\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\de0db9f8b64c03eef484f8a4bb754136\AndroidManifest.xml:17:1-25:12
-MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\52249\.gradle\caches\transforms-1\files-1.1\cursoradapter-28.0.0.aar\991806cdf65c0486180be67da6643f48\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\52249\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\d99c58fc495294b879da38794af5abe8\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:documentfile:28.0.0] C:\Users\52249\.gradle\caches\transforms-1\files-1.1\documentfile-28.0.0.aar\3c836c767b4efda5fb2c862b2c33c74d\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\52249\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-28.0.0.aar\67d78195bb602e2e6d81f8e6dd5ed434\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:print:28.0.0] C:\Users\52249\.gradle\caches\transforms-1\files-1.1\print-28.0.0.aar\5b3669e8443808edfb1a662d3486e5ad\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\52249\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.1.aar\dc683f9dd42662b01789a274ffe5b145\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:interpolator:28.0.0] C:\Users\52249\.gradle\caches\transforms-1\files-1.1\interpolator-28.0.0.aar\858354f2f2f96ff15f5938889e1c5e0d\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\52249\.gradle\caches\transforms-1\files-1.1\livedata-1.1.1.aar\3f913f9ef300a897c1c6325c8c3b3cda\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\52249\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.1.aar\863846f2c681ce7a2c1bd5070cc82238\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.core:runtime:1.1.1] C:\Users\52249\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\f9dda4449ac4bac77edffc63cc64d7be\AndroidManifest.xml:17:1-22:12
-INJECTED from D:\android\Android_Studio_workplace\weather_android\app\src\main\AndroidManifest.xml:2:1-55:12
-INJECTED from D:\android\Android_Studio_workplace\weather_android\app\src\main\AndroidManifest.xml:2:1-55:12
-INJECTED from D:\android\Android_Studio_workplace\weather_android\app\src\main\AndroidManifest.xml:2:1-55:12
+ADDED from C:\Users\Administrator\Desktop\Weather1(1)\weather_android\master\app\src\main\AndroidManifest.xml:2:1-55:12
+INJECTED from C:\Users\Administrator\Desktop\Weather1(1)\weather_android\master\app\src\main\AndroidManifest.xml:2:1-55:12
+INJECTED from C:\Users\Administrator\Desktop\Weather1(1)\weather_android\master\app\src\main\AndroidManifest.xml:2:1-55:12
+INJECTED from C:\Users\Administrator\Desktop\Weather1(1)\weather_android\master\app\src\main\AndroidManifest.xml:2:1-55:12
+MERGED from [com.android.support:design:28.0.0] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\design-28.0.0.aar\2fe16733adab13b96f3dc49a7228d588\AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\appcompat-v7-28.0.0.aar\318f54f9e810b0f206757e7619b984de\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\01e41ec0cdbe001725e2484d919aef3e\AndroidManifest.xml:2:1-11:12
+MERGED from [de.hdodenhof:circleimageview:2.1.0] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\circleimageview-2.1.0.aar\ed6136a0b764b5da4e96a7d1e635db2d\AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:recyclerview-v7:28.0.0] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-28.0.0.aar\0091b6b7c7c1e2dfa2bb8ae5b3c309df\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:cardview-v7:28.0.0] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\cardview-v7-28.0.0.aar\00f53a1bda63cc0240b7908d0be64c31\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\support-fragment-28.0.0.aar\bb393d48605ff85b9b41bfe7d4528205\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-28.0.0.aar\1cfff92357dceb84a883c6b08901f183\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\support-core-ui-28.0.0.aar\91928fd59982bf7e47db6ab1120590a4\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\support-core-utils-28.0.0.aar\dadfaa37685b5c6358060f6c5fcdd456\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-28.0.0.aar\d50f180b42f2c03a39c20029cb1bf2c5\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:transition:28.0.0] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\transition-28.0.0.aar\10a55c84507cfb28b531d53576d0c7ce\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:loader:28.0.0] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\loader-28.0.0.aar\0ef7266c6e80fc613da320e36a0d2eff\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:viewpager:28.0.0] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\viewpager-28.0.0.aar\5a569acf649de4f9abe1bd7843ddfc0d\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\coordinatorlayout-28.0.0.aar\c2e7cc335f95fe4a5a37d7ec0e160402\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\drawerlayout-28.0.0.aar\d30fa62447510f0ff76cf82a45ba187d\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\slidingpanelayout-28.0.0.aar\2888e93feda0a850231e337918d030fd\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:customview:28.0.0] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\customview-28.0.0.aar\1d3eb89817c59a748d4513dabd27f6bf\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\swiperefreshlayout-28.0.0.aar\bb857f852c731cae725b8593d2b3c988\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\asynclayoutinflater-28.0.0.aar\a1c95f28376046479158b39c5dd8852f\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\e0f6dfee98d77264462e7bd599f8e356\AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\3c5acda08c99cd1d0b2390c2d98f722f\AndroidManifest.xml:17:1-25:12
+MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\cursoradapter-28.0.0.aar\f757fc4e6b2bcd1b2c1b961c304fe4f8\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\86acfcad15940e5c2f59b656b6f8e64d\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:documentfile:28.0.0] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\documentfile-28.0.0.aar\0e759a0e0e5a1a4217ade2680a2fde48\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-28.0.0.aar\da4903c601a67545907b91c05272dd7a\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:print:28.0.0] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\print-28.0.0.aar\f1a1a8b182c30325ad0e3ab59527e737\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.1.aar\9436cbb17ed8adfec4f737137e088542\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:interpolator:28.0.0] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\interpolator-28.0.0.aar\fc7c616f56b048379b14af984cbf72cd\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\livedata-1.1.1.aar\ee59b1fdac645648d0823d615a5488cd\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.1.aar\0c42abef250d314e73196272fdd16ba1\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.1] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\21c916e2447e3bfbc1c8ab5a8bcf9840\AndroidManifest.xml:17:1-22:12
+INJECTED from C:\Users\Administrator\Desktop\Weather1(1)\weather_android\master\app\src\main\AndroidManifest.xml:2:1-55:12
+INJECTED from C:\Users\Administrator\Desktop\Weather1(1)\weather_android\master\app\src\main\AndroidManifest.xml:2:1-55:12
+INJECTED from C:\Users\Administrator\Desktop\Weather1(1)\weather_android\master\app\src\main\AndroidManifest.xml:2:1-55:12
 	package
-		ADDED from D:\android\Android_Studio_workplace\weather_android\app\src\main\AndroidManifest.xml:3:5-31
-		INJECTED from D:\android\Android_Studio_workplace\weather_android\app\src\main\AndroidManifest.xml
-		INJECTED from D:\android\Android_Studio_workplace\weather_android\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Administrator\Desktop\Weather1(1)\weather_android\master\app\src\main\AndroidManifest.xml:3:5-31
+		INJECTED from C:\Users\Administrator\Desktop\Weather1(1)\weather_android\master\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Administrator\Desktop\Weather1(1)\weather_android\master\app\src\main\AndroidManifest.xml
 	android:versionName
-		ADDED from D:\android\Android_Studio_workplace\weather_android\app\src\main\AndroidManifest.xml:5:5-30
-		INJECTED from D:\android\Android_Studio_workplace\weather_android\app\src\main\AndroidManifest.xml
-		INJECTED from D:\android\Android_Studio_workplace\weather_android\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Administrator\Desktop\Weather1(1)\weather_android\master\app\src\main\AndroidManifest.xml:5:5-30
+		INJECTED from C:\Users\Administrator\Desktop\Weather1(1)\weather_android\master\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Administrator\Desktop\Weather1(1)\weather_android\master\app\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from D:\android\Android_Studio_workplace\weather_android\app\src\main\AndroidManifest.xml:2:11-69
+		ADDED from C:\Users\Administrator\Desktop\Weather1(1)\weather_android\master\app\src\main\AndroidManifest.xml:2:11-69
 	android:versionCode
-		ADDED from D:\android\Android_Studio_workplace\weather_android\app\src\main\AndroidManifest.xml:4:5-28
-		INJECTED from D:\android\Android_Studio_workplace\weather_android\app\src\main\AndroidManifest.xml
-		INJECTED from D:\android\Android_Studio_workplace\weather_android\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Administrator\Desktop\Weather1(1)\weather_android\master\app\src\main\AndroidManifest.xml:4:5-28
+		INJECTED from C:\Users\Administrator\Desktop\Weather1(1)\weather_android\master\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Administrator\Desktop\Weather1(1)\weather_android\master\app\src\main\AndroidManifest.xml
 uses-sdk
-ADDED from D:\android\Android_Studio_workplace\weather_android\app\src\main\AndroidManifest.xml:7:5-46
-INJECTED from D:\android\Android_Studio_workplace\weather_android\app\src\main\AndroidManifest.xml:7:5-46
-INJECTED from D:\android\Android_Studio_workplace\weather_android\app\src\main\AndroidManifest.xml:7:5-46
-MERGED from [com.android.support:design:28.0.0] C:\Users\52249\.gradle\caches\transforms-1\files-1.1\design-28.0.0.aar\91495634eb8179b76155c89dd007b404\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:design:28.0.0] C:\Users\52249\.gradle\caches\transforms-1\files-1.1\design-28.0.0.aar\91495634eb8179b76155c89dd007b404\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\52249\.gradle\caches\transforms-1\files-1.1\appcompat-v7-28.0.0.aar\94bf185858fbbecba6cbc9694c0a79cb\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\52249\.gradle\caches\transforms-1\files-1.1\appcompat-v7-28.0.0.aar\94bf185858fbbecba6cbc9694c0a79cb\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\52249\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\6bc80939061b80cd6ea1e7a38c46db1d\AndroidManifest.xml:5:5-7:41
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\52249\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\6bc80939061b80cd6ea1e7a38c46db1d\AndroidManifest.xml:5:5-7:41
-MERGED from [de.hdodenhof:circleimageview:2.1.0] C:\Users\52249\.gradle\caches\transforms-1\files-1.1\circleimageview-2.1.0.aar\a3775441b7b47c81cc902077ab8253c7\AndroidManifest.xml:5:5-7:41
-MERGED from [de.hdodenhof:circleimageview:2.1.0] C:\Users\52249\.gradle\caches\transforms-1\files-1.1\circleimageview-2.1.0.aar\a3775441b7b47c81cc902077ab8253c7\AndroidManifest.xml:5:5-7:41
-MERGED from [com.android.support:recyclerview-v7:28.0.0] C:\Users\52249\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-28.0.0.aar\b3d8aaa668210569649079342c60c2b1\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:recyclerview-v7:28.0.0] C:\Users\52249\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-28.0.0.aar\b3d8aaa668210569649079342c60c2b1\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:cardview-v7:28.0.0] C:\Users\52249\.gradle\caches\transforms-1\files-1.1\cardview-v7-28.0.0.aar\7aa858127066904d1bf0a0aa65820f71\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:cardview-v7:28.0.0] C:\Users\52249\.gradle\caches\transforms-1\files-1.1\cardview-v7-28.0.0.aar\7aa858127066904d1bf0a0aa65820f71\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\52249\.gradle\caches\transforms-1\files-1.1\support-fragment-28.0.0.aar\8535b861364adb2f4ac1b2b29e25f93d\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\52249\.gradle\caches\transforms-1\files-1.1\support-fragment-28.0.0.aar\8535b861364adb2f4ac1b2b29e25f93d\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\52249\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-28.0.0.aar\729e3c8b4e16e7743c04281e3767bf91\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\52249\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-28.0.0.aar\729e3c8b4e16e7743c04281e3767bf91\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\52249\.gradle\caches\transforms-1\files-1.1\support-core-ui-28.0.0.aar\71a0b6a4b2629bfd98f37380306d29fc\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\52249\.gradle\caches\transforms-1\files-1.1\support-core-ui-28.0.0.aar\71a0b6a4b2629bfd98f37380306d29fc\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\52249\.gradle\caches\transforms-1\files-1.1\support-core-utils-28.0.0.aar\7de766058a15ee1bc1628e4cd5b25b30\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\52249\.gradle\caches\transforms-1\files-1.1\support-core-utils-28.0.0.aar\7de766058a15ee1bc1628e4cd5b25b30\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\52249\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-28.0.0.aar\94f9ea7d17adf7e6b32fd503aaf2ff7c\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\52249\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-28.0.0.aar\94f9ea7d17adf7e6b32fd503aaf2ff7c\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:transition:28.0.0] C:\Users\52249\.gradle\caches\transforms-1\files-1.1\transition-28.0.0.aar\4030b6c7dc4c060da674cee5398815a0\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:transition:28.0.0] C:\Users\52249\.gradle\caches\transforms-1\files-1.1\transition-28.0.0.aar\4030b6c7dc4c060da674cee5398815a0\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:loader:28.0.0] C:\Users\52249\.gradle\caches\transforms-1\files-1.1\loader-28.0.0.aar\dce58fc084de6a67fa9687ec5784860c\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:loader:28.0.0] C:\Users\52249\.gradle\caches\transforms-1\files-1.1\loader-28.0.0.aar\dce58fc084de6a67fa9687ec5784860c\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:viewpager:28.0.0] C:\Users\52249\.gradle\caches\transforms-1\files-1.1\viewpager-28.0.0.aar\bfcb576f703504a2bfed78e7bb381bb0\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:viewpager:28.0.0] C:\Users\52249\.gradle\caches\transforms-1\files-1.1\viewpager-28.0.0.aar\bfcb576f703504a2bfed78e7bb381bb0\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\52249\.gradle\caches\transforms-1\files-1.1\coordinatorlayout-28.0.0.aar\fff3feba2ed2344cc407e0ff91146847\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\52249\.gradle\caches\transforms-1\files-1.1\coordinatorlayout-28.0.0.aar\fff3feba2ed2344cc407e0ff91146847\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\52249\.gradle\caches\transforms-1\files-1.1\drawerlayout-28.0.0.aar\8529df7172d6d737aef78a7d2bb6fff7\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\52249\.gradle\caches\transforms-1\files-1.1\drawerlayout-28.0.0.aar\8529df7172d6d737aef78a7d2bb6fff7\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\52249\.gradle\caches\transforms-1\files-1.1\slidingpanelayout-28.0.0.aar\ce58f95bf348fcf56878f2651b43a6df\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\52249\.gradle\caches\transforms-1\files-1.1\slidingpanelayout-28.0.0.aar\ce58f95bf348fcf56878f2651b43a6df\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:customview:28.0.0] C:\Users\52249\.gradle\caches\transforms-1\files-1.1\customview-28.0.0.aar\cc80f89a7adba24c40f9efdc9aac6f1a\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:customview:28.0.0] C:\Users\52249\.gradle\caches\transforms-1\files-1.1\customview-28.0.0.aar\cc80f89a7adba24c40f9efdc9aac6f1a\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\52249\.gradle\caches\transforms-1\files-1.1\swiperefreshlayout-28.0.0.aar\b04e71b1c4546166fa99fe57ac919821\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\52249\.gradle\caches\transforms-1\files-1.1\swiperefreshlayout-28.0.0.aar\b04e71b1c4546166fa99fe57ac919821\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\52249\.gradle\caches\transforms-1\files-1.1\asynclayoutinflater-28.0.0.aar\a5759169eb2cff9822f44c6eb427dc05\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\52249\.gradle\caches\transforms-1\files-1.1\asynclayoutinflater-28.0.0.aar\a5759169eb2cff9822f44c6eb427dc05\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-compat:28.0.0] C:\Users\52249\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\99df066629b15ca560e02b9b20879dd4\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-compat:28.0.0] C:\Users\52249\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\99df066629b15ca560e02b9b20879dd4\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\52249\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\de0db9f8b64c03eef484f8a4bb754136\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\52249\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\de0db9f8b64c03eef484f8a4bb754136\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\52249\.gradle\caches\transforms-1\files-1.1\cursoradapter-28.0.0.aar\991806cdf65c0486180be67da6643f48\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\52249\.gradle\caches\transforms-1\files-1.1\cursoradapter-28.0.0.aar\991806cdf65c0486180be67da6643f48\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\52249\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\d99c58fc495294b879da38794af5abe8\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\52249\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\d99c58fc495294b879da38794af5abe8\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:documentfile:28.0.0] C:\Users\52249\.gradle\caches\transforms-1\files-1.1\documentfile-28.0.0.aar\3c836c767b4efda5fb2c862b2c33c74d\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:documentfile:28.0.0] C:\Users\52249\.gradle\caches\transforms-1\files-1.1\documentfile-28.0.0.aar\3c836c767b4efda5fb2c862b2c33c74d\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\52249\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-28.0.0.aar\67d78195bb602e2e6d81f8e6dd5ed434\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\52249\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-28.0.0.aar\67d78195bb602e2e6d81f8e6dd5ed434\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:print:28.0.0] C:\Users\52249\.gradle\caches\transforms-1\files-1.1\print-28.0.0.aar\5b3669e8443808edfb1a662d3486e5ad\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:print:28.0.0] C:\Users\52249\.gradle\caches\transforms-1\files-1.1\print-28.0.0.aar\5b3669e8443808edfb1a662d3486e5ad\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\52249\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.1.aar\dc683f9dd42662b01789a274ffe5b145\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\52249\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.1.aar\dc683f9dd42662b01789a274ffe5b145\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:interpolator:28.0.0] C:\Users\52249\.gradle\caches\transforms-1\files-1.1\interpolator-28.0.0.aar\858354f2f2f96ff15f5938889e1c5e0d\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:interpolator:28.0.0] C:\Users\52249\.gradle\caches\transforms-1\files-1.1\interpolator-28.0.0.aar\858354f2f2f96ff15f5938889e1c5e0d\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\52249\.gradle\caches\transforms-1\files-1.1\livedata-1.1.1.aar\3f913f9ef300a897c1c6325c8c3b3cda\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\52249\.gradle\caches\transforms-1\files-1.1\livedata-1.1.1.aar\3f913f9ef300a897c1c6325c8c3b3cda\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\52249\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.1.aar\863846f2c681ce7a2c1bd5070cc82238\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\52249\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.1.aar\863846f2c681ce7a2c1bd5070cc82238\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.core:runtime:1.1.1] C:\Users\52249\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\f9dda4449ac4bac77edffc63cc64d7be\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.core:runtime:1.1.1] C:\Users\52249\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\f9dda4449ac4bac77edffc63cc64d7be\AndroidManifest.xml:20:5-44
-INJECTED from D:\android\Android_Studio_workplace\weather_android\app\src\main\AndroidManifest.xml:7:5-46
-INJECTED from D:\android\Android_Studio_workplace\weather_android\app\src\main\AndroidManifest.xml:7:5-46
+ADDED from C:\Users\Administrator\Desktop\Weather1(1)\weather_android\master\app\src\main\AndroidManifest.xml:7:5-46
+INJECTED from C:\Users\Administrator\Desktop\Weather1(1)\weather_android\master\app\src\main\AndroidManifest.xml:7:5-46
+INJECTED from C:\Users\Administrator\Desktop\Weather1(1)\weather_android\master\app\src\main\AndroidManifest.xml:7:5-46
+MERGED from [com.android.support:design:28.0.0] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\design-28.0.0.aar\2fe16733adab13b96f3dc49a7228d588\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:design:28.0.0] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\design-28.0.0.aar\2fe16733adab13b96f3dc49a7228d588\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\appcompat-v7-28.0.0.aar\318f54f9e810b0f206757e7619b984de\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\appcompat-v7-28.0.0.aar\318f54f9e810b0f206757e7619b984de\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\01e41ec0cdbe001725e2484d919aef3e\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\01e41ec0cdbe001725e2484d919aef3e\AndroidManifest.xml:5:5-7:41
+MERGED from [de.hdodenhof:circleimageview:2.1.0] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\circleimageview-2.1.0.aar\ed6136a0b764b5da4e96a7d1e635db2d\AndroidManifest.xml:5:5-7:41
+MERGED from [de.hdodenhof:circleimageview:2.1.0] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\circleimageview-2.1.0.aar\ed6136a0b764b5da4e96a7d1e635db2d\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:recyclerview-v7:28.0.0] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-28.0.0.aar\0091b6b7c7c1e2dfa2bb8ae5b3c309df\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:28.0.0] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-28.0.0.aar\0091b6b7c7c1e2dfa2bb8ae5b3c309df\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:28.0.0] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\cardview-v7-28.0.0.aar\00f53a1bda63cc0240b7908d0be64c31\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:28.0.0] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\cardview-v7-28.0.0.aar\00f53a1bda63cc0240b7908d0be64c31\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\support-fragment-28.0.0.aar\bb393d48605ff85b9b41bfe7d4528205\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\support-fragment-28.0.0.aar\bb393d48605ff85b9b41bfe7d4528205\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-28.0.0.aar\1cfff92357dceb84a883c6b08901f183\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-28.0.0.aar\1cfff92357dceb84a883c6b08901f183\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\support-core-ui-28.0.0.aar\91928fd59982bf7e47db6ab1120590a4\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\support-core-ui-28.0.0.aar\91928fd59982bf7e47db6ab1120590a4\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\support-core-utils-28.0.0.aar\dadfaa37685b5c6358060f6c5fcdd456\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\support-core-utils-28.0.0.aar\dadfaa37685b5c6358060f6c5fcdd456\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-28.0.0.aar\d50f180b42f2c03a39c20029cb1bf2c5\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-28.0.0.aar\d50f180b42f2c03a39c20029cb1bf2c5\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:28.0.0] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\transition-28.0.0.aar\10a55c84507cfb28b531d53576d0c7ce\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:28.0.0] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\transition-28.0.0.aar\10a55c84507cfb28b531d53576d0c7ce\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\loader-28.0.0.aar\0ef7266c6e80fc613da320e36a0d2eff\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\loader-28.0.0.aar\0ef7266c6e80fc613da320e36a0d2eff\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\viewpager-28.0.0.aar\5a569acf649de4f9abe1bd7843ddfc0d\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\viewpager-28.0.0.aar\5a569acf649de4f9abe1bd7843ddfc0d\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\coordinatorlayout-28.0.0.aar\c2e7cc335f95fe4a5a37d7ec0e160402\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\coordinatorlayout-28.0.0.aar\c2e7cc335f95fe4a5a37d7ec0e160402\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\drawerlayout-28.0.0.aar\d30fa62447510f0ff76cf82a45ba187d\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\drawerlayout-28.0.0.aar\d30fa62447510f0ff76cf82a45ba187d\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\slidingpanelayout-28.0.0.aar\2888e93feda0a850231e337918d030fd\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\slidingpanelayout-28.0.0.aar\2888e93feda0a850231e337918d030fd\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\customview-28.0.0.aar\1d3eb89817c59a748d4513dabd27f6bf\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\customview-28.0.0.aar\1d3eb89817c59a748d4513dabd27f6bf\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\swiperefreshlayout-28.0.0.aar\bb857f852c731cae725b8593d2b3c988\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\swiperefreshlayout-28.0.0.aar\bb857f852c731cae725b8593d2b3c988\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\asynclayoutinflater-28.0.0.aar\a1c95f28376046479158b39c5dd8852f\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\asynclayoutinflater-28.0.0.aar\a1c95f28376046479158b39c5dd8852f\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\e0f6dfee98d77264462e7bd599f8e356\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\e0f6dfee98d77264462e7bd599f8e356\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\3c5acda08c99cd1d0b2390c2d98f722f\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\3c5acda08c99cd1d0b2390c2d98f722f\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\cursoradapter-28.0.0.aar\f757fc4e6b2bcd1b2c1b961c304fe4f8\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\cursoradapter-28.0.0.aar\f757fc4e6b2bcd1b2c1b961c304fe4f8\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\86acfcad15940e5c2f59b656b6f8e64d\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\86acfcad15940e5c2f59b656b6f8e64d\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\documentfile-28.0.0.aar\0e759a0e0e5a1a4217ade2680a2fde48\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\documentfile-28.0.0.aar\0e759a0e0e5a1a4217ade2680a2fde48\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-28.0.0.aar\da4903c601a67545907b91c05272dd7a\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-28.0.0.aar\da4903c601a67545907b91c05272dd7a\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\print-28.0.0.aar\f1a1a8b182c30325ad0e3ab59527e737\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\print-28.0.0.aar\f1a1a8b182c30325ad0e3ab59527e737\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.1.aar\9436cbb17ed8adfec4f737137e088542\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.1.aar\9436cbb17ed8adfec4f737137e088542\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\interpolator-28.0.0.aar\fc7c616f56b048379b14af984cbf72cd\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\interpolator-28.0.0.aar\fc7c616f56b048379b14af984cbf72cd\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\livedata-1.1.1.aar\ee59b1fdac645648d0823d615a5488cd\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\livedata-1.1.1.aar\ee59b1fdac645648d0823d615a5488cd\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.1.aar\0c42abef250d314e73196272fdd16ba1\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.1.aar\0c42abef250d314e73196272fdd16ba1\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\21c916e2447e3bfbc1c8ab5a8bcf9840\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\21c916e2447e3bfbc1c8ab5a8bcf9840\AndroidManifest.xml:20:5-44
+INJECTED from C:\Users\Administrator\Desktop\Weather1(1)\weather_android\master\app\src\main\AndroidManifest.xml:7:5-46
+INJECTED from C:\Users\Administrator\Desktop\Weather1(1)\weather_android\master\app\src\main\AndroidManifest.xml:7:5-46
 	android:targetSdkVersion
-		ADDED from D:\android\Android_Studio_workplace\weather_android\app\src\main\AndroidManifest.xml:7:15-43
-		INJECTED from D:\android\Android_Studio_workplace\weather_android\app\src\main\AndroidManifest.xml
-		INJECTED from D:\android\Android_Studio_workplace\weather_android\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Administrator\Desktop\Weather1(1)\weather_android\master\app\src\main\AndroidManifest.xml:7:15-43
+		INJECTED from C:\Users\Administrator\Desktop\Weather1(1)\weather_android\master\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Administrator\Desktop\Weather1(1)\weather_android\master\app\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from D:\android\Android_Studio_workplace\weather_android\app\src\main\AndroidManifest.xml
-		ADDED from D:\android\Android_Studio_workplace\weather_android\app\src\main\AndroidManifest.xml:7:5-46
-		INJECTED from D:\android\Android_Studio_workplace\weather_android\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Administrator\Desktop\Weather1(1)\weather_android\master\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Administrator\Desktop\Weather1(1)\weather_android\master\app\src\main\AndroidManifest.xml:7:5-46
+		INJECTED from C:\Users\Administrator\Desktop\Weather1(1)\weather_android\master\app\src\main\AndroidManifest.xml
 uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from D:\android\Android_Studio_workplace\weather_android\app\src\main\AndroidManifest.xml:9:5-79
+ADDED from C:\Users\Administrator\Desktop\Weather1(1)\weather_android\master\app\src\main\AndroidManifest.xml:9:5-79
 	android:name
-		ADDED from D:\android\Android_Studio_workplace\weather_android\app\src\main\AndroidManifest.xml:9:22-76
+		ADDED from C:\Users\Administrator\Desktop\Weather1(1)\weather_android\master\app\src\main\AndroidManifest.xml:9:22-76
 uses-permission#android.permission.INTERNET
-ADDED from D:\android\Android_Studio_workplace\weather_android\app\src\main\AndroidManifest.xml:10:5-67
+ADDED from C:\Users\Administrator\Desktop\Weather1(1)\weather_android\master\app\src\main\AndroidManifest.xml:10:5-67
 	android:name
-		ADDED from D:\android\Android_Studio_workplace\weather_android\app\src\main\AndroidManifest.xml:10:22-64
+		ADDED from C:\Users\Administrator\Desktop\Weather1(1)\weather_android\master\app\src\main\AndroidManifest.xml:10:22-64
 uses-permission#android.permission.ACCESS_WIFI_STATE
-ADDED from D:\android\Android_Studio_workplace\weather_android\app\src\main\AndroidManifest.xml:11:5-76
+ADDED from C:\Users\Administrator\Desktop\Weather1(1)\weather_android\master\app\src\main\AndroidManifest.xml:11:5-76
 	android:name
-		ADDED from D:\android\Android_Studio_workplace\weather_android\app\src\main\AndroidManifest.xml:11:22-73
+		ADDED from C:\Users\Administrator\Desktop\Weather1(1)\weather_android\master\app\src\main\AndroidManifest.xml:11:22-73
 uses-permission#android.permission.ACCESS_COARSE_LOCATION
-ADDED from D:\android\Android_Studio_workplace\weather_android\app\src\main\AndroidManifest.xml:12:5-81
+ADDED from C:\Users\Administrator\Desktop\Weather1(1)\weather_android\master\app\src\main\AndroidManifest.xml:12:5-81
 	android:name
-		ADDED from D:\android\Android_Studio_workplace\weather_android\app\src\main\AndroidManifest.xml:12:22-78
+		ADDED from C:\Users\Administrator\Desktop\Weather1(1)\weather_android\master\app\src\main\AndroidManifest.xml:12:22-78
 uses-permission#android.permission.READ_FINE_LOCATION
-ADDED from D:\android\Android_Studio_workplace\weather_android\app\src\main\AndroidManifest.xml:13:5-77
+ADDED from C:\Users\Administrator\Desktop\Weather1(1)\weather_android\master\app\src\main\AndroidManifest.xml:13:5-77
 	android:name
-		ADDED from D:\android\Android_Studio_workplace\weather_android\app\src\main\AndroidManifest.xml:13:22-74
+		ADDED from C:\Users\Administrator\Desktop\Weather1(1)\weather_android\master\app\src\main\AndroidManifest.xml:13:22-74
 uses-permission#android.permission.READ_PHONE_STATE
-ADDED from D:\android\Android_Studio_workplace\weather_android\app\src\main\AndroidManifest.xml:14:5-75
+ADDED from C:\Users\Administrator\Desktop\Weather1(1)\weather_android\master\app\src\main\AndroidManifest.xml:14:5-75
 	android:name
-		ADDED from D:\android\Android_Studio_workplace\weather_android\app\src\main\AndroidManifest.xml:14:22-72
+		ADDED from C:\Users\Administrator\Desktop\Weather1(1)\weather_android\master\app\src\main\AndroidManifest.xml:14:22-72
 uses-permission#android.permission.READ_CONTACTS
-ADDED from D:\android\Android_Studio_workplace\weather_android\app\src\main\AndroidManifest.xml:15:5-72
+ADDED from C:\Users\Administrator\Desktop\Weather1(1)\weather_android\master\app\src\main\AndroidManifest.xml:15:5-72
 	android:name
-		ADDED from D:\android\Android_Studio_workplace\weather_android\app\src\main\AndroidManifest.xml:15:22-69
+		ADDED from C:\Users\Administrator\Desktop\Weather1(1)\weather_android\master\app\src\main\AndroidManifest.xml:15:22-69
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from D:\android\Android_Studio_workplace\weather_android\app\src\main\AndroidManifest.xml:16:5-81
+ADDED from C:\Users\Administrator\Desktop\Weather1(1)\weather_android\master\app\src\main\AndroidManifest.xml:16:5-81
 	android:name
-		ADDED from D:\android\Android_Studio_workplace\weather_android\app\src\main\AndroidManifest.xml:16:22-78
+		ADDED from C:\Users\Administrator\Desktop\Weather1(1)\weather_android\master\app\src\main\AndroidManifest.xml:16:22-78
 uses-permission#android.permission.READ_EXTERNAL_STORAGE
-ADDED from D:\android\Android_Studio_workplace\weather_android\app\src\main\AndroidManifest.xml:17:5-80
+ADDED from C:\Users\Administrator\Desktop\Weather1(1)\weather_android\master\app\src\main\AndroidManifest.xml:17:5-80
 	android:name
-		ADDED from D:\android\Android_Studio_workplace\weather_android\app\src\main\AndroidManifest.xml:17:22-77
+		ADDED from C:\Users\Administrator\Desktop\Weather1(1)\weather_android\master\app\src\main\AndroidManifest.xml:17:22-77
 application
-ADDED from D:\android\Android_Studio_workplace\weather_android\app\src\main\AndroidManifest.xml:19:5-53:19
-MERGED from [com.android.support:design:28.0.0] C:\Users\52249\.gradle\caches\transforms-1\files-1.1\design-28.0.0.aar\91495634eb8179b76155c89dd007b404\AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:design:28.0.0] C:\Users\52249\.gradle\caches\transforms-1\files-1.1\design-28.0.0.aar\91495634eb8179b76155c89dd007b404\AndroidManifest.xml:22:5-20
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\52249\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\6bc80939061b80cd6ea1e7a38c46db1d\AndroidManifest.xml:9:5-20
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\52249\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\6bc80939061b80cd6ea1e7a38c46db1d\AndroidManifest.xml:9:5-20
-MERGED from [de.hdodenhof:circleimageview:2.1.0] C:\Users\52249\.gradle\caches\transforms-1\files-1.1\circleimageview-2.1.0.aar\a3775441b7b47c81cc902077ab8253c7\AndroidManifest.xml:9:5-20
-MERGED from [de.hdodenhof:circleimageview:2.1.0] C:\Users\52249\.gradle\caches\transforms-1\files-1.1\circleimageview-2.1.0.aar\a3775441b7b47c81cc902077ab8253c7\AndroidManifest.xml:9:5-20
-MERGED from [com.android.support:support-compat:28.0.0] C:\Users\52249\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\99df066629b15ca560e02b9b20879dd4\AndroidManifest.xml:22:5-94
-MERGED from [com.android.support:support-compat:28.0.0] C:\Users\52249\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\99df066629b15ca560e02b9b20879dd4\AndroidManifest.xml:22:5-94
-MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\52249\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\de0db9f8b64c03eef484f8a4bb754136\AndroidManifest.xml:22:5-23:19
-MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\52249\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\de0db9f8b64c03eef484f8a4bb754136\AndroidManifest.xml:22:5-23:19
+ADDED from C:\Users\Administrator\Desktop\Weather1(1)\weather_android\master\app\src\main\AndroidManifest.xml:19:5-53:19
+MERGED from [com.android.support:design:28.0.0] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\design-28.0.0.aar\2fe16733adab13b96f3dc49a7228d588\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:design:28.0.0] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\design-28.0.0.aar\2fe16733adab13b96f3dc49a7228d588\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\01e41ec0cdbe001725e2484d919aef3e\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\01e41ec0cdbe001725e2484d919aef3e\AndroidManifest.xml:9:5-20
+MERGED from [de.hdodenhof:circleimageview:2.1.0] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\circleimageview-2.1.0.aar\ed6136a0b764b5da4e96a7d1e635db2d\AndroidManifest.xml:9:5-20
+MERGED from [de.hdodenhof:circleimageview:2.1.0] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\circleimageview-2.1.0.aar\ed6136a0b764b5da4e96a7d1e635db2d\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\e0f6dfee98d77264462e7bd599f8e356\AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\e0f6dfee98d77264462e7bd599f8e356\AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\3c5acda08c99cd1d0b2390c2d98f722f\AndroidManifest.xml:22:5-23:19
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\3c5acda08c99cd1d0b2390c2d98f722f\AndroidManifest.xml:22:5-23:19
 	android:appComponentFactory
-		ADDED from [com.android.support:support-compat:28.0.0] C:\Users\52249\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\99df066629b15ca560e02b9b20879dd4\AndroidManifest.xml:22:18-91
+		ADDED from [com.android.support:support-compat:28.0.0] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\e0f6dfee98d77264462e7bd599f8e356\AndroidManifest.xml:22:18-91
 	android:label
-		ADDED from D:\android\Android_Studio_workplace\weather_android\app\src\main\AndroidManifest.xml:23:9-41
+		ADDED from C:\Users\Administrator\Desktop\Weather1(1)\weather_android\master\app\src\main\AndroidManifest.xml:23:9-41
 	android:icon
-		ADDED from D:\android\Android_Studio_workplace\weather_android\app\src\main\AndroidManifest.xml:22:9-45
+		ADDED from C:\Users\Administrator\Desktop\Weather1(1)\weather_android\master\app\src\main\AndroidManifest.xml:22:9-45
 	android:allowBackup
-		ADDED from D:\android\Android_Studio_workplace\weather_android\app\src\main\AndroidManifest.xml:21:9-35
+		ADDED from C:\Users\Administrator\Desktop\Weather1(1)\weather_android\master\app\src\main\AndroidManifest.xml:21:9-35
 	android:theme
-		ADDED from D:\android\Android_Studio_workplace\weather_android\app\src\main\AndroidManifest.xml:24:9-65
+		ADDED from C:\Users\Administrator\Desktop\Weather1(1)\weather_android\master\app\src\main\AndroidManifest.xml:24:9-65
 	android:name
-		ADDED from D:\android\Android_Studio_workplace\weather_android\app\src\main\AndroidManifest.xml:20:9-43
+		ADDED from C:\Users\Administrator\Desktop\Weather1(1)\weather_android\master\app\src\main\AndroidManifest.xml:20:9-43
 meta-data#com.thinkland.juheapi.openid
-ADDED from D:\android\Android_Studio_workplace\weather_android\app\src\main\AndroidManifest.xml:27:9-29:66
+ADDED from C:\Users\Administrator\Desktop\Weather1(1)\weather_android\master\app\src\main\AndroidManifest.xml:27:9-29:66
 	android:value
-		ADDED from D:\android\Android_Studio_workplace\weather_android\app\src\main\AndroidManifest.xml:29:13-63
+		ADDED from C:\Users\Administrator\Desktop\Weather1(1)\weather_android\master\app\src\main\AndroidManifest.xml:29:13-63
 	android:name
-		ADDED from D:\android\Android_Studio_workplace\weather_android\app\src\main\AndroidManifest.xml:28:13-56
+		ADDED from C:\Users\Administrator\Desktop\Weather1(1)\weather_android\master\app\src\main\AndroidManifest.xml:28:13-56
 activity#com.juhe.weather.WeatherActivity
-ADDED from D:\android\Android_Studio_workplace\weather_android\app\src\main\AndroidManifest.xml:31:9-39:20
+ADDED from C:\Users\Administrator\Desktop\Weather1(1)\weather_android\master\app\src\main\AndroidManifest.xml:31:9-39:20
 	android:screenOrientation
-		ADDED from D:\android\Android_Studio_workplace\weather_android\app\src\main\AndroidManifest.xml:33:13-49
+		ADDED from C:\Users\Administrator\Desktop\Weather1(1)\weather_android\master\app\src\main\AndroidManifest.xml:33:13-49
 	android:name
-		ADDED from D:\android\Android_Studio_workplace\weather_android\app\src\main\AndroidManifest.xml:32:13-44
+		ADDED from C:\Users\Administrator\Desktop\Weather1(1)\weather_android\master\app\src\main\AndroidManifest.xml:32:13-44
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from D:\android\Android_Studio_workplace\weather_android\app\src\main\AndroidManifest.xml:34:13-38:29
+ADDED from C:\Users\Administrator\Desktop\Weather1(1)\weather_android\master\app\src\main\AndroidManifest.xml:34:13-38:29
 action#android.intent.action.MAIN
-ADDED from D:\android\Android_Studio_workplace\weather_android\app\src\main\AndroidManifest.xml:35:17-69
+ADDED from C:\Users\Administrator\Desktop\Weather1(1)\weather_android\master\app\src\main\AndroidManifest.xml:35:17-69
 	android:name
-		ADDED from D:\android\Android_Studio_workplace\weather_android\app\src\main\AndroidManifest.xml:35:25-66
+		ADDED from C:\Users\Administrator\Desktop\Weather1(1)\weather_android\master\app\src\main\AndroidManifest.xml:35:25-66
 category#android.intent.category.LAUNCHER
-ADDED from D:\android\Android_Studio_workplace\weather_android\app\src\main\AndroidManifest.xml:37:17-77
+ADDED from C:\Users\Administrator\Desktop\Weather1(1)\weather_android\master\app\src\main\AndroidManifest.xml:37:17-77
 	android:name
-		ADDED from D:\android\Android_Studio_workplace\weather_android\app\src\main\AndroidManifest.xml:37:27-74
+		ADDED from C:\Users\Administrator\Desktop\Weather1(1)\weather_android\master\app\src\main\AndroidManifest.xml:37:27-74
 activity#com.juhe.weather.CityActivity
-ADDED from D:\android\Android_Studio_workplace\weather_android\app\src\main\AndroidManifest.xml:40:9-42:52
+ADDED from C:\Users\Administrator\Desktop\Weather1(1)\weather_android\master\app\src\main\AndroidManifest.xml:40:9-42:52
 	android:screenOrientation
-		ADDED from D:\android\Android_Studio_workplace\weather_android\app\src\main\AndroidManifest.xml:42:13-49
+		ADDED from C:\Users\Administrator\Desktop\Weather1(1)\weather_android\master\app\src\main\AndroidManifest.xml:42:13-49
 	android:name
-		ADDED from D:\android\Android_Studio_workplace\weather_android\app\src\main\AndroidManifest.xml:41:13-41
+		ADDED from C:\Users\Administrator\Desktop\Weather1(1)\weather_android\master\app\src\main\AndroidManifest.xml:41:13-41
 service#com.juhe.weather.service.WeatherService
-ADDED from D:\android\Android_Studio_workplace\weather_android\app\src\main\AndroidManifest.xml:44:9-59
+ADDED from C:\Users\Administrator\Desktop\Weather1(1)\weather_android\master\app\src\main\AndroidManifest.xml:44:9-59
 	android:name
-		ADDED from D:\android\Android_Studio_workplace\weather_android\app\src\main\AndroidManifest.xml:44:18-56
+		ADDED from C:\Users\Administrator\Desktop\Weather1(1)\weather_android\master\app\src\main\AndroidManifest.xml:44:18-56
 activity#com.juhe.weather.NewsActivity
-ADDED from D:\android\Android_Studio_workplace\weather_android\app\src\main\AndroidManifest.xml:46:9-48:59
+ADDED from C:\Users\Administrator\Desktop\Weather1(1)\weather_android\master\app\src\main\AndroidManifest.xml:46:9-48:59
 	android:label
-		ADDED from D:\android\Android_Studio_workplace\weather_android\app\src\main\AndroidManifest.xml:48:13-56
+		ADDED from C:\Users\Administrator\Desktop\Weather1(1)\weather_android\master\app\src\main\AndroidManifest.xml:48:13-56
 	android:name
-		ADDED from D:\android\Android_Studio_workplace\weather_android\app\src\main\AndroidManifest.xml:47:13-41
+		ADDED from C:\Users\Administrator\Desktop\Weather1(1)\weather_android\master\app\src\main\AndroidManifest.xml:47:13-41
 activity#com.juhe.weather.NewsInfoActivity
-ADDED from D:\android\Android_Studio_workplace\weather_android\app\src\main\AndroidManifest.xml:49:9-52:81
+ADDED from C:\Users\Administrator\Desktop\Weather1(1)\weather_android\master\app\src\main\AndroidManifest.xml:49:9-52:81
 	android:label
-		ADDED from D:\android\Android_Studio_workplace\weather_android\app\src\main\AndroidManifest.xml:51:13-61
+		ADDED from C:\Users\Administrator\Desktop\Weather1(1)\weather_android\master\app\src\main\AndroidManifest.xml:51:13-61
 	android:theme
-		ADDED from D:\android\Android_Studio_workplace\weather_android\app\src\main\AndroidManifest.xml:52:13-69
+		ADDED from C:\Users\Administrator\Desktop\Weather1(1)\weather_android\master\app\src\main\AndroidManifest.xml:52:13-69
 	android:name
-		ADDED from D:\android\Android_Studio_workplace\weather_android\app\src\main\AndroidManifest.xml:50:13-45
+		ADDED from C:\Users\Administrator\Desktop\Weather1(1)\weather_android\master\app\src\main\AndroidManifest.xml:50:13-45
