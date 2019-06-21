@@ -42,7 +42,7 @@
                     android:padding="4dp"
                     android:src="@drawable/arrow" />
             </RelativeLayout>
-
+            <!--发布时间-->
             <TextView
                 android:id="@+id/tv_release"
                 android:layout_width="wrap_content"
@@ -52,7 +52,7 @@
                 android:text="@string/default_text"
                 android:textColor="@color/text_color"
                 android:textSize="12sp" />
-
+            <!--发布线-->
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1px"
@@ -62,13 +62,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp" >
-
+                <!--当天温度状态标志图，-->
                 <ImageView
                     android:id="@+id/iv_now_weather"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@drawable/d00" />
-
+                <!--当天温度状态标志图旁边的有雾。。。晴-->
                 <TextView
                     android:id="@+id/tv_now_weather"
                     android:layout_width="wrap_content"
@@ -79,6 +79,7 @@
                     android:textColor="@color/text_color" />
             </LinearLayout>
 
+            <!--当天温度度数-->
             <TextView
                 android:id="@+id/tv_today_temp"
                 android:layout_width="wrap_content"
@@ -93,7 +94,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
                 android:layout_marginTop="16dp" >
-
+                <!--现在的温度，-->
                 <TextView
                     android:id="@+id/tv_now_temp"
                     android:layout_width="0dp"
@@ -103,6 +104,7 @@
                     android:textColor="@color/text_color"
                     android:textSize="48sp" />
 
+                <!--引用了一个线框布局-->
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

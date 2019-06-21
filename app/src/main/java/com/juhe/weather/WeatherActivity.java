@@ -253,8 +253,9 @@ public class WeatherActivity extends Activity implements Serializable {
         tv_temp_b.setText(temp_str_b + "°");
 
     }
-
+//初始化的方法，
     private void init() {
+        //下拉属性
         mPullToRefreshScrollView = (PullToRefreshScrollView) findViewById(R.id.pull_refresh_scrollview);
         mPullToRefreshScrollView.setOnRefreshListener(new OnRefreshListener<ScrollView>() {
 

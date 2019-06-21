@@ -243,7 +243,6 @@ public class WeatherService extends Service {
 				bean.setHumidity(skJson.getString("humidity"));
 
 				// future
-
 				Date date = new Date(System.currentTimeMillis());
 				JSONArray futureArray = resultJson.getJSONArray("future");
 				List<FutureWeatherBean> futureList = new ArrayList<FutureWeatherBean>();
