@@ -52,7 +52,7 @@ public class CityActivity extends Activity {
         getCities();
 
         et_content = (EditText) findViewById(R.id.search);
-        iv_search = (ImageView)findViewById(R.id.search_button);
+        iv_search = (ImageView)findViewById(R.id.search_but);
 		/*处理搜索城市*/
         iv_search.setOnClickListener(new OnClickListener() {
             @Override

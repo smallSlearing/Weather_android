@@ -1396,6 +1396,7 @@ id scrollview
 id search
 id search_badge
 id search_bar
+id search_but
 id search_button
 id search_clear
 id search_close_btn

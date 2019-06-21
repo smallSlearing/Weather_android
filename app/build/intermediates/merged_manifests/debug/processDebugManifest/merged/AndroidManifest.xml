@@ -25,14 +25,9 @@
         android:debuggable="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-<<<<<<< Updated upstream
-        android:testOnly="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
 
         <!-- android:theme="@android:style/Theme.NoTitleBar"> -->
-=======
-        android:theme="@android:style/Theme.NoTitleBar" >
->>>>>>> Stashed changes
         <meta-data
             android:name="com.thinkland.juheapi.openid"
             android:value="JH349278d634f1b6a4e3f09e9b41de1d9f" />
