@@ -98,6 +98,8 @@ public class WeatherActivity extends Activity implements Serializable {
 
     private LinearLayout li_news;
 
+    private LinearLayout small_video_ly;
+
 
 
 
@@ -312,6 +314,17 @@ public class WeatherActivity extends Activity implements Serializable {
             }
         });
 
+        /*设置小视频跳转*/
+        small_video_ly = (LinearLayout) findViewById(R.id.small_video_ly);
+        small_video_ly.setOnClickListener(new OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                // TODO Auto-generated method stub
+                startActivity(new Intent(mContext, VideoActivity.class));
+
+            }
+        });
 
 
         tv_city = (TextView) findViewById(R.id.tv_city);

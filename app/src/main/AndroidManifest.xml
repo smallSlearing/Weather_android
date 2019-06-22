@@ -50,6 +50,9 @@
             android:name=".NewsInfoActivity"
             android:label="@string/title_activity_news_info"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
+        <activity
+            android:name=".VideoActivity"
+             />
     </application>
 
 </manifest>

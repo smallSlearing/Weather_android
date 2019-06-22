@@ -55,6 +55,7 @@
             android:name="com.juhe.weather.NewsInfoActivity"
             android:label="@string/title_activity_news_info"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity android:name="com.juhe.weather.VideoActivity" />
 
         <provider
             android:name="com.android.tools.ir.server.InstantRunContentProvider"
