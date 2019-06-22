@@ -1201,6 +1201,7 @@ drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
 drawable progressbar
+drawable search
 drawable search_clear
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
@@ -1273,6 +1274,7 @@ id direct
 id disableHome
 id disabled
 id drawer_layout
+id drawer_layout02
 id edit_query
 id end
 id enterAlways
@@ -1343,6 +1345,7 @@ id nav_location
 id nav_mail
 id nav_task
 id nav_view
+id nav_view02
 id navigation_header_container
 id never
 id newContent

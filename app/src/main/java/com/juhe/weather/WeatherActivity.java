@@ -5,6 +5,7 @@ import java.lang.reflect.Field;
 import java.util.Calendar;
 import java.util.List;
 
+import android.app.ActionBar;
 import android.app.Activity;
 import android.content.ComponentName;
 import android.content.Context;
@@ -12,6 +13,11 @@ import android.content.Intent;
 import android.content.ServiceConnection;
 import android.os.Bundle;
 import android.os.IBinder;
+import android.support.design.widget.NavigationView;
+import android.support.v4.view.GravityCompat;
+import android.support.v4.widget.DrawerLayout;
+
+import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ImageView;
@@ -37,6 +43,7 @@ public class WeatherActivity extends Activity implements Serializable {
     private Context mContext;
     private PullToRefreshScrollView mPullToRefreshScrollView;
     private ScrollView mScrollView;
+    private DrawerLayout mDrawerLayout;
 
     private WeatherService mService;
 
@@ -93,6 +100,7 @@ public class WeatherActivity extends Activity implements Serializable {
 
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         // TODO Auto-generated method stub
@@ -101,6 +109,17 @@ public class WeatherActivity extends Activity implements Serializable {
         mContext = this;
         init();
         initService();
+        mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout02);
+        NavigationView navView=(NavigationView) findViewById(R. id. nav_view02);
+        navView.setCheckedItem(R.id.nav_call);
+        navView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener(){
+            @Override
+            public boolean onNavigationItemSelected(MenuItem item){
+                mDrawerLayout.closeDrawers();
+                return true;
+            }
+        });
+
     }
 
     private void initService() {
@@ -361,6 +380,17 @@ public class WeatherActivity extends Activity implements Serializable {
 
         unbindService(conn);
         super.onDestroy();
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch(item.getItemId()){
+            case android.R.id.home:
+                mDrawerLayout.openDrawer(GravityCompat.START);
+                break;
+            default:
+        }
+        return true;
     }
 
 }
