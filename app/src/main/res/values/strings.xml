@@ -27,4 +27,15 @@
     <string name="title_activity_news_info">新闻详情</string>
     <string name="small_video">小视频</string>
 
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="startlocation">开始定位</string>
+    <string name="stoplocation">停止定位</string>
+    <string name="startforeground">开始后台定位</string>
+    <string name="stopforeground">停止后台定位</string>
+    <string name="error_code_desc">错误码说明</string>
+    <string name="diy_call_back">自定义回调</string>
+    <string name="diy_call_back_ps">ps:网络定位由于精度低于gps，计算距离会有部分偏差</string>
+    <string name="qa_title">常见问题</string>
 </resources>
