@@ -12,8 +12,8 @@
         <item android:id="@+id/nav_mail"
             android:icon="@drawable/nav_mail"
             android:title="Mail"/>
-        <item android:id="@+id/nav_task"
+        <item android:id="@+id/nav_changBackground"
             android:icon="@drawable/nav_task"
-            android:title="Tasks"/>
+            android:title="更换背景图"/>
     </group>
 </menu>

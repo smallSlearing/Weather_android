@@ -1,7 +1,9 @@
 package com.juhe.weather;
 
+import java.io.File;
 import java.io.Serializable;
 import java.lang.reflect.Field;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
@@ -12,11 +14,13 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.ServiceConnection;
 import android.os.Bundle;
+import android.os.Environment;
 import android.os.IBinder;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -44,6 +48,12 @@ public class WeatherActivity extends Activity implements Serializable {
     private PullToRefreshScrollView mPullToRefreshScrollView;
     private ScrollView mScrollView;
     private DrawerLayout mDrawerLayout;
+    //当前背景图在列表中的下标
+    private int backgroundIndex = 0;
+    /*背景图列表*/
+    private List<Integer> backgroundList = new ArrayList<>();
+
+    View pull_refresh_scrollview;
 
     private WeatherService mService;
 
@@ -108,19 +118,37 @@ public class WeatherActivity extends Activity implements Serializable {
         // TODO Auto-generated method stub
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_weather);
+
+//        R.drawable.img_2;
         mContext = this;
         init();
         initService();
+        findIdByReflect();
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout02);
         NavigationView navView=(NavigationView) findViewById(R. id. nav_view02);
         navView.setCheckedItem(R.id.nav_call);
         navView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener(){
             @Override
             public boolean onNavigationItemSelected(MenuItem item){
+
+                /**当点击更换背景的时候，进行更换背景**/
+                if(item.getItemId()==R.id.nav_changBackground) {
+                    if (backgroundIndex+1 >= backgroundList.size()) {
+                        backgroundIndex = -1;
+                    }
+                    backgroundIndex++;
+                    //更换图片
+                    pull_refresh_scrollview.setBackgroundResource(backgroundList.get(backgroundIndex));
+
+                }
                 mDrawerLayout.closeDrawers();
                 return true;
             }
         });
+
+        pull_refresh_scrollview = findViewById(R.id.pull_refresh_scrollview);
+        pull_refresh_scrollview.setBackgroundResource(R.drawable.timg);
+
 
     }
 
@@ -404,6 +432,34 @@ public class WeatherActivity extends Activity implements Serializable {
             default:
         }
         return true;
+    }
+
+
+    public void changeBackground(){
+
+    }
+
+
+    /**
+     * 通过反射机制获得所有背景图的id
+     * @return
+     */
+    public void findIdByReflect(){
+        Field[] fields = R.drawable.class.getFields();
+        Log.e("图片的名字",fields[0].getName());
+        Log.e("aaaa","weather_background_10".indexOf("weather")+"");
+
+        for(Field field : fields){
+            Log.e("图片的名字",field.getName());
+            Log.e("是否包含",(field.getName().indexOf("weather_background_") >= 0)+"");
+            if(field.getName().indexOf("weather") >= 0){
+                try {
+                    backgroundList.add(field.getInt(null));
+                } catch (IllegalAccessException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
     }
 
 }

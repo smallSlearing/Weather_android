@@ -5472,10 +5472,15 @@ public final class R {
     public static final int play_arrow=0x7f070111;
     public static final int progressbar=0x7f070112;
     public static final int search_clear=0x7f070113;
-    public static final int tooltip_frame_dark=0x7f070114;
-    public static final int tooltip_frame_light=0x7f070115;
-    public static final int wireframe_dark=0x7f070116;
-    public static final int wireframe_light=0x7f070117;
+    public static final int timg=0x7f070114;
+    public static final int tooltip_frame_dark=0x7f070115;
+    public static final int tooltip_frame_light=0x7f070116;
+    public static final int video_img=0x7f070117;
+    public static final int weather_background_1=0x7f070118;
+    public static final int weather_background_2=0x7f070119;
+    public static final int weather_background_3=0x7f07011a;
+    public static final int wireframe_dark=0x7f07011b;
+    public static final int wireframe_light=0x7f07011c;
   }
   public static final class id {
     public static final int ALT=0x7f080000;
@@ -5614,10 +5619,10 @@ public final class R {
     public static final int mtrl_internal_children_alpha_tag=0x7f080085;
     public static final int multiply=0x7f080086;
     public static final int nav_call=0x7f080087;
-    public static final int nav_friends=0x7f080088;
-    public static final int nav_location=0x7f080089;
-    public static final int nav_mail=0x7f08008a;
-    public static final int nav_task=0x7f08008b;
+    public static final int nav_changBackground=0x7f080088;
+    public static final int nav_friends=0x7f080089;
+    public static final int nav_location=0x7f08008a;
+    public static final int nav_mail=0x7f08008b;
     public static final int nav_view=0x7f08008c;
     public static final int nav_view02=0x7f08008d;
     public static final int navigation_header_container=0x7f08008e;

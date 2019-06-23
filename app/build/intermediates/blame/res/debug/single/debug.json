@@ -64,16 +64,16 @@
         "source": "C:\\Users\\Administrator\\Desktop\\Weather1(1)\\weather_android\\master\\app\\src\\main\\res\\drawable-hdpi\\d24.png"
     },
     {
-        "merged": "C:\\Users\\Administrator\\Desktop\\Weather1(1)\\weather_android\\master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_n15.png.flat",
-        "source": "C:\\Users\\Administrator\\Desktop\\Weather1(1)\\weather_android\\master\\app\\src\\main\\res\\drawable-hdpi\\n15.png"
+        "merged": "C:\\Users\\Administrator\\Desktop\\Weather1(1)\\weather_android\\master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_scrubber_control_to_pressed_mtrl_005.png.flat",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\318f54f9e810b0f206757e7619b984de\\res\\drawable-mdpi-v4\\abc_scrubber_control_to_pressed_mtrl_005.png"
     },
     {
         "merged": "C:\\Users\\Administrator\\Desktop\\Weather1(1)\\weather_android\\master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_ic_menu_paste_mtrl_am_alpha.png.flat",
         "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\318f54f9e810b0f206757e7619b984de\\res\\drawable-mdpi-v4\\abc_ic_menu_paste_mtrl_am_alpha.png"
     },
     {
-        "merged": "C:\\Users\\Administrator\\Desktop\\Weather1(1)\\weather_android\\master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_scrubber_control_to_pressed_mtrl_005.png.flat",
-        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\318f54f9e810b0f206757e7619b984de\\res\\drawable-mdpi-v4\\abc_scrubber_control_to_pressed_mtrl_005.png"
+        "merged": "C:\\Users\\Administrator\\Desktop\\Weather1(1)\\weather_android\\master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_n15.png.flat",
+        "source": "C:\\Users\\Administrator\\Desktop\\Weather1(1)\\weather_android\\master\\app\\src\\main\\res\\drawable-hdpi\\n15.png"
     },
     {
         "merged": "C:\\Users\\Administrator\\Desktop\\Weather1(1)\\weather_android\\master\\app\\build\\intermediates\\res\\merged\\debug\\animator_mtrl_fab_transformation_sheet_collapse_spec.xml.flat",
@@ -90,6 +90,10 @@
     {
         "merged": "C:\\Users\\Administrator\\Desktop\\Weather1(1)\\weather_android\\master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_cond_icon_318.png.flat",
         "source": "C:\\Users\\Administrator\\Desktop\\Weather1(1)\\weather_android\\master\\app\\src\\main\\res\\drawable-hdpi\\cond_icon_318.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Weather1(1)\\weather_android\\master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_search.png.flat",
+        "source": "C:\\Users\\Administrator\\Desktop\\Weather1(1)\\weather_android\\master\\app\\src\\main\\res\\drawable-mdpi\\ic_search.png"
     },
     {
         "merged": "C:\\Users\\Administrator\\Desktop\\Weather1(1)\\weather_android\\master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_abc_ic_menu_copy_mtrl_am_alpha.png.flat",
@@ -112,12 +116,12 @@
         "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\318f54f9e810b0f206757e7619b984de\\res\\drawable-xxxhdpi-v4\\abc_ic_menu_selectall_mtrl_alpha.png"
     },
     {
-        "merged": "C:\\Users\\Administrator\\Desktop\\Weather1(1)\\weather_android\\master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_n24.png.flat",
-        "source": "C:\\Users\\Administrator\\Desktop\\Weather1(1)\\weather_android\\master\\app\\src\\main\\res\\drawable-hdpi\\n24.png"
-    },
-    {
         "merged": "C:\\Users\\Administrator\\Desktop\\Weather1(1)\\weather_android\\master\\app\\build\\intermediates\\res\\merged\\debug\\color_abc_tint_btn_checkable.xml.flat",
         "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\318f54f9e810b0f206757e7619b984de\\res\\color\\abc_tint_btn_checkable.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Weather1(1)\\weather_android\\master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_n24.png.flat",
+        "source": "C:\\Users\\Administrator\\Desktop\\Weather1(1)\\weather_android\\master\\app\\src\\main\\res\\drawable-hdpi\\n24.png"
     },
     {
         "merged": "C:\\Users\\Administrator\\Desktop\\Weather1(1)\\weather_android\\master\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
@@ -246,6 +250,10 @@
     {
         "merged": "C:\\Users\\Administrator\\Desktop\\Weather1(1)\\weather_android\\master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_abc_ic_star_black_48dp.png.flat",
         "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\318f54f9e810b0f206757e7619b984de\\res\\drawable-xxxhdpi-v4\\abc_ic_star_black_48dp.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Weather1(1)\\weather_android\\master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_video_img.jpg.flat",
+        "source": "C:\\Users\\Administrator\\Desktop\\Weather1(1)\\weather_android\\master\\app\\src\\main\\res\\drawable-hdpi\\video_img.jpg"
     },
     {
         "merged": "C:\\Users\\Administrator\\Desktop\\Weather1(1)\\weather_android\\master\\app\\build\\intermediates\\res\\merged\\debug\\interpolator-v21_mtrl_linear_out_slow_in.xml.flat",
@@ -400,6 +408,10 @@
         "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\318f54f9e810b0f206757e7619b984de\\res\\drawable-xxhdpi-v4\\abc_textfield_default_mtrl_alpha.9.png"
     },
     {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Weather1(1)\\weather_android\\master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_weather_background_2.jpg.flat",
+        "source": "C:\\Users\\Administrator\\Desktop\\Weather1(1)\\weather_android\\master\\app\\src\\main\\res\\drawable-mdpi\\weather_background_2.jpg"
+    },
+    {
         "merged": "C:\\Users\\Administrator\\Desktop\\Weather1(1)\\weather_android\\master\\app\\build\\intermediates\\res\\merged\\debug\\layout_design_bottom_navigation_item.xml.flat",
         "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\design-28.0.0.aar\\2fe16733adab13b96f3dc49a7228d588\\res\\layout\\design_bottom_navigation_item.xml"
     },
@@ -514,6 +526,10 @@
     {
         "merged": "C:\\Users\\Administrator\\Desktop\\Weather1(1)\\weather_android\\master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_n20.png.flat",
         "source": "C:\\Users\\Administrator\\Desktop\\Weather1(1)\\weather_android\\master\\app\\src\\main\\res\\drawable-hdpi\\n20.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Weather1(1)\\weather_android\\master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_timg.jpg.flat",
+        "source": "C:\\Users\\Administrator\\Desktop\\Weather1(1)\\weather_android\\master\\app\\src\\main\\res\\drawable-mdpi\\timg.jpg"
     },
     {
         "merged": "C:\\Users\\Administrator\\Desktop\\Weather1(1)\\weather_android\\master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_textfield_default_mtrl_alpha.9.png.flat",
@@ -886,6 +902,10 @@
     {
         "merged": "C:\\Users\\Administrator\\Desktop\\Weather1(1)\\weather_android\\master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_switch_track_mtrl_alpha.9.png.flat",
         "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\318f54f9e810b0f206757e7619b984de\\res\\drawable-mdpi-v4\\abc_switch_track_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Weather1(1)\\weather_android\\master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_weather_background_3.jpg.flat",
+        "source": "C:\\Users\\Administrator\\Desktop\\Weather1(1)\\weather_android\\master\\app\\src\\main\\res\\drawable-hdpi\\weather_background_3.jpg"
     },
     {
         "merged": "C:\\Users\\Administrator\\Desktop\\Weather1(1)\\weather_android\\master\\app\\build\\intermediates\\res\\merged\\debug\\color_abc_tint_edittext.xml.flat",
@@ -1338,10 +1358,6 @@
     {
         "merged": "C:\\Users\\Administrator\\Desktop\\Weather1(1)\\weather_android\\master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_cond_icon_206.png.flat",
         "source": "C:\\Users\\Administrator\\Desktop\\Weather1(1)\\weather_android\\master\\app\\src\\main\\res\\drawable-hdpi\\cond_icon_206.png"
-    },
-    {
-        "merged": "C:\\Users\\Administrator\\Desktop\\Weather1(1)\\weather_android\\master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_search.png.flat",
-        "source": "C:\\Users\\Administrator\\Desktop\\Weather1(1)\\weather_android\\master\\app\\src\\main\\res\\drawable-hdpi\\ic_search.png"
     },
     {
         "merged": "C:\\Users\\Administrator\\Desktop\\Weather1(1)\\weather_android\\master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_arrow.png.flat",
@@ -2062,6 +2078,10 @@
     {
         "merged": "C:\\Users\\Administrator\\Desktop\\Weather1(1)\\weather_android\\master\\app\\build\\intermediates\\res\\merged\\debug\\color_mtrl_tabs_icon_color_selector.xml.flat",
         "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\design-28.0.0.aar\\2fe16733adab13b96f3dc49a7228d588\\res\\color\\mtrl_tabs_icon_color_selector.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Weather1(1)\\weather_android\\master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_weather_background_1.jpg.flat",
+        "source": "C:\\Users\\Administrator\\Desktop\\Weather1(1)\\weather_android\\master\\app\\src\\main\\res\\drawable-mdpi\\weather_background_1.jpg"
     },
     {
         "merged": "C:\\Users\\Administrator\\Desktop\\Weather1(1)\\weather_android\\master\\app\\build\\intermediates\\res\\merged\\debug\\layout_item_city_list.xml.flat",
