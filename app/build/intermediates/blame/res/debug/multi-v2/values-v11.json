@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\android\\Android_Studio_workplace\\weather_android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v11\\values-v11.xml",
+            "outputFile": "C:\\Users\\Administrator\\Desktop\\Weather1(1)\\weather_android\\master\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v11\\values-v11.xml",
             "map": [
                 {
-                    "source": "D:\\android\\Android_Studio_workplace\\weather_android\\app\\src\\main\\res\\values-v11\\styles.xml",
+                    "source": "C:\\Users\\Administrator\\Desktop\\Weather1(1)\\weather_android\\master\\app\\src\\main\\res\\values-v11\\styles.xml",
                     "from": {
                         "startLines": "6",
                         "startColumns": "4",

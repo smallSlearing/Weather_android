@@ -55,6 +55,7 @@ public class WeatherActivity extends Activity implements Serializable {
     private int backgroundIndex = 0;
     /*背景图列表*/
     private List<Integer> backgroundList = new ArrayList<>();
+
     private ImageView im_play_front;
     private ImageView im_play_next;
     private ImageView im_play_play;
@@ -504,12 +505,27 @@ public class WeatherActivity extends Activity implements Serializable {
 
     public void initMusicListener(){
 
+
+        mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            //给音乐播放完继续播放下一首
+            @Override
+            public void onCompletion(MediaPlayer mp) {
+                mp.reset();
+                if(musicIndex < musicPathArr.length-1){
+                    musicIndex++;
+                }
+                initMediaPlayer();
+            }
+        });
+
         //给开始暂停按钮设置监听器
         im_play_play.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
 
                 if (!mediaPlayer.isPlaying()) {
+                    mediaPlayer.reset();
+                    //初始化播放器
                     initMediaPlayer();
                     ((ImageView)v).setImageResource(R.drawable.icon_player_play);
                 }else{
@@ -524,7 +540,6 @@ public class WeatherActivity extends Activity implements Serializable {
             @Override
             public void onClick(View v) {
                 mediaPlayer.reset();
-                mediaPlayer = new MediaPlayer();
                 if(musicIndex>0){
                     musicIndex--;
                 }else{
@@ -541,7 +556,6 @@ public class WeatherActivity extends Activity implements Serializable {
             @Override
             public void onClick(View v) {
                 mediaPlayer.reset();
-                mediaPlayer = new MediaPlayer();
                 if(musicIndex < musicPathArr.length-1){
                     musicIndex++;
                 }else{
