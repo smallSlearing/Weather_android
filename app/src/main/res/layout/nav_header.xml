@@ -5,27 +5,38 @@
     android:padding="10dp"
     android:background="?attr/colorPrimary">
 
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/icon_image"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        android:src="@drawable/nav_icon"
-        android:layout_centerInParent="true"/>
+    <!--<de.hdodenhof.circleimageview.CircleImageView-->
+        <!--android:id="@+id/icon_image"-->
+        <!--android:layout_width="70dp"-->
+        <!--android:layout_height="70dp"-->
+        <!--android:src="@drawable/nav_icon"-->
+        <!--android:layout_centerInParent="true"/>-->
 
-    <TextView android:id="@+id/username"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:text="tonygreendev@gmail.com"
-        android:textColor="#FFF"
-        android:textSize="14sp"/>
+        android:layout_centerVertical="true"
+        android:orientation="horizontal">
 
-    <TextView android:id="@+id/mail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@id/username"
-        android:text="Tony Green"
-        android:textColor="#FFF"
-        android:textSize="14sp"/>
+
+            <ImageView
+                android:id="@+id/play_left"
+                android:layout_width="40dp"
+                android:layout_marginLeft="75dp"
+                android:layout_height="40dp"
+                android:src="@drawable/icon_player_rew" />
+
+            <ImageView
+                android:id="@+id/play_play"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/icon_player_puase" />
+
+            <ImageView
+                android:id="@+id/play_right"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/icon_player_fwd" />
+    </LinearLayout>
 
 </RelativeLayout>

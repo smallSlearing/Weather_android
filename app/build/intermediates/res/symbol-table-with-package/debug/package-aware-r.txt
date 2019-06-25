@@ -1151,6 +1151,11 @@ drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
 drawable ic_search
 drawable ic_settings
+drawable icon_player_fwd
+drawable icon_player_pause
+drawable icon_player_play
+drawable icon_player_puase
+drawable icon_player_rew
 drawable loading
 drawable mtrl_snackbar_background
 drawable mtrl_tabs_default_indicator
@@ -1313,7 +1318,6 @@ id home
 id homeAsUp
 id icon
 id icon_group
-id icon_image
 id ifRoom
 id image
 id img_play
@@ -1344,7 +1348,6 @@ id line3
 id listMode
 id list_item
 id lv_city
-id mail
 id manualOnly
 id masked
 id message
@@ -1353,13 +1356,12 @@ id mini
 id mtrl_child_content_container
 id mtrl_internal_children_alpha_tag
 id multiply
-id nav_call
 id nav_changBackground
-id nav_friends
-id nav_location
-id nav_mail
+id nav_news
+id nav_vidoe
 id nav_view
 id nav_view02
+id nav_weather
 id navigation_header_container
 id never
 id newContent
@@ -1381,6 +1383,9 @@ id parentPanel
 id parent_matrix
 id percent
 id pin
+id play_left
+id play_play
+id play_right
 id progress_circular
 id progress_horizontal
 id pullDownFromTop
@@ -1522,7 +1527,6 @@ id uniform
 id unlabeled
 id up
 id useLogo
-id username
 id video_view
 id view_offset_helper
 id visible

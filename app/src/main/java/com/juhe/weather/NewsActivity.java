@@ -1,5 +1,6 @@
 package com.juhe.weather;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -81,11 +82,29 @@ public class NewsActivity extends AppCompatActivity {
             actionBar.setDisplayHomeAsUpEnabled(true);
             actionBar.setHomeAsUpIndicator(R.drawable.ic_menu);
         }
-        navView.setCheckedItem(R.id.nav_call);
+
         navView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener(){
             @Override
             public boolean onNavigationItemSelected(MenuItem item){
-                mDrawerLayout.closeDrawers(); return true;
+                switch (item.getItemId()){
+                    case R.id.nav_changBackground:
+                        break;
+
+                    case R.id.nav_weather:
+                        startActivity(new Intent(NewsActivity.this , WeatherActivity.class));
+                        break;
+
+                    case R.id.nav_vidoe:
+
+                        startActivity(new Intent(NewsActivity.this , VideoActivity.class));
+                        break;
+
+                    case R.id.nav_news:
+                        break;
+                }
+
+                mDrawerLayout.closeDrawers();
+                return true;
             }
         });
 

@@ -13,6 +13,8 @@ import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.ServiceConnection;
+import android.content.pm.PackageManager;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.IBinder;
@@ -29,6 +31,7 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.juhe.weather.bean.FutureWeatherBean;
 import com.juhe.weather.bean.HoursWeatherBean;
@@ -52,6 +55,9 @@ public class WeatherActivity extends Activity implements Serializable {
     private int backgroundIndex = 0;
     /*背景图列表*/
     private List<Integer> backgroundList = new ArrayList<>();
+    private ImageView im_play_front;
+    private ImageView im_play_next;
+    private ImageView im_play_play;
 
     View pull_refresh_scrollview;
 
@@ -125,22 +131,45 @@ public class WeatherActivity extends Activity implements Serializable {
         initService();
         findIdByReflect();
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout02);
-        NavigationView navView=(NavigationView) findViewById(R. id. nav_view02);
-        navView.setCheckedItem(R.id.nav_call);
+        NavigationView navView=(NavigationView) findViewById(R.id.nav_view02);
+
+        View headerView = navView.inflateHeaderView(R.layout.nav_header);
+        /*获得背景音乐的控制按钮*/
+        im_play_front = headerView.findViewById(R.id.play_left);
+        im_play_play = headerView.findViewById(R.id.play_play);
+        im_play_next = headerView.findViewById(R.id.play_right);
+        /*给背景音乐的控制按钮设置监听器*/
+        initMusicListener();
+
+//        navView.setCheckedItem(R.id.nav_call);
         navView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener(){
             @Override
             public boolean onNavigationItemSelected(MenuItem item){
 
-                /**当点击更换背景的时候，进行更换背景**/
-                if(item.getItemId()==R.id.nav_changBackground) {
-                    if (backgroundIndex+1 >= backgroundList.size()) {
-                        backgroundIndex = -1;
-                    }
-                    backgroundIndex++;
-                    //更换图片
-                    pull_refresh_scrollview.setBackgroundResource(backgroundList.get(backgroundIndex));
+                switch (item.getItemId()){
+                    case R.id.nav_changBackground:
+                        if (backgroundIndex+1 >= backgroundList.size()) {
+                            backgroundIndex = -1;
+                        }
+                        backgroundIndex++;
+                        //更换图片
+                        pull_refresh_scrollview.setBackgroundResource(backgroundList.get(backgroundIndex));
+                        break;
 
+                    case R.id.nav_weather:
+//                        startActivity(new Intent(WeatherActivity.this , WeatherActivity.class));
+                        break;
+
+                    case R.id.nav_vidoe:
+                        mediaPlayer.release();
+                        startActivity(new Intent(WeatherActivity.this , VideoActivity.class));
+                        break;
+
+                    case R.id.nav_news:
+                        startActivity(new Intent(WeatherActivity.this , NewsActivity.class));
+                        break;
                 }
+
                 mDrawerLayout.closeDrawers();
                 return true;
             }
@@ -446,11 +475,8 @@ public class WeatherActivity extends Activity implements Serializable {
      */
     public void findIdByReflect(){
         Field[] fields = R.drawable.class.getFields();
-        Log.e("图片的名字",fields[0].getName());
-        Log.e("aaaa","weather_background_10".indexOf("weather")+"");
 
         for(Field field : fields){
-            Log.e("图片的名字",field.getName());
             Log.e("是否包含",(field.getName().indexOf("weather_background_") >= 0)+"");
             if(field.getName().indexOf("weather") >= 0){
                 try {
@@ -461,5 +487,89 @@ public class WeatherActivity extends Activity implements Serializable {
             }
         }
     }
+
+
+
+
+    /**********************音乐模块代码**********************************/
+
+    private MediaPlayer mediaPlayer = new MediaPlayer();//音乐播放器
+    String [] musicPathArr = {"http://music.163.com/song/media/outer/url?id=479408999",
+            "http://music.163.com/song/media/outer/url?id=516728102",
+            "http://music.163.com/song/media/outer/url?id=28310930",
+    };
+
+    int musicIndex = 0;
+
+
+    public void initMusicListener(){
+
+        //给开始暂停按钮设置监听器
+        im_play_play.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                if (!mediaPlayer.isPlaying()) {
+                    initMediaPlayer();
+                    ((ImageView)v).setImageResource(R.drawable.icon_player_play);
+                }else{
+                    mediaPlayer.pause(); // 开始播放
+                    ((ImageView)v).setImageResource(R.drawable.icon_player_puase);
+                }
+            }
+        });
+
+        //给上一首按钮设置监听器
+        im_play_front.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mediaPlayer.reset();
+                mediaPlayer = new MediaPlayer();
+                if(musicIndex>0){
+                    musicIndex--;
+                }else{
+                    musicIndex=0;
+                }
+                initMediaPlayer();
+
+            }
+        });
+
+
+        //给下一首按钮设置监听器
+        im_play_next.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mediaPlayer.reset();
+                mediaPlayer = new MediaPlayer();
+                if(musicIndex < musicPathArr.length-1){
+                    musicIndex++;
+                }else{
+                    musicIndex=musicPathArr.length-1;
+                }
+                initMediaPlayer();
+            }
+        });
+    }
+
+    private void initMediaPlayer() {
+        try {
+            mediaPlayer.setDataSource(musicPathArr[musicIndex]); // 指定音频文件的路径
+            mediaPlayer.prepare(); // 让MediaPlayer进入到准备状态
+            mediaPlayer.start();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+//    @Override
+//    protected void onDestroy() {
+//        super.onDestroy();
+//        if (mediaPlayer != null) {
+//            mediaPlayer.stop();
+//            mediaPlayer.release();
+//        }
+//    }
+
 
 }
