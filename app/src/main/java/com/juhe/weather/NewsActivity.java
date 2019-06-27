@@ -116,7 +116,7 @@ public class NewsActivity extends AppCompatActivity {
         });
 
         //从后台请求新闻数据
-        getNewsDate();
+        getNewData();
     }
 
 
@@ -136,8 +136,10 @@ public class NewsActivity extends AppCompatActivity {
                     @Override
                     public void run(){
 //                        initNews();
+                        //页数加1，下次想后端请求数据的说好，请求的是第二页的数据
                         pageNum++;
-                        getNewsDate();
+//                        从后端获取新闻信息
+                        getNewData();
                         newsAdapter.notifyDataSetChanged();
                         swipeRefresh.setRefreshing(false);
                     }
@@ -168,36 +170,6 @@ public class NewsActivity extends AppCompatActivity {
         recyclerView.setAdapter(this.newsAdapter);
     }
 
-    /**
-     *请求后端新闻数据
-     */
-    public void  getNewsDate(){
-        //创建子线程请求数据
-        new Thread() {
-            @Override
-            public void run() {
-                try {
-                    //发起请求
-                    OkHttpClient client = new OkHttpClient();
-                    Request request = new Request.Builder().url("http://139.159.133.43:8080/news/getNewsByType?pageNum=" + pageNum + "&type=" + type).build();
-                    Response response = client.newCall(request).execute();
-                    //得到一个json格式的字符串
-                    String responseData = response.body().string();
-
-                    //转成json数组对象
-                    jsonArray = new JSONArray(responseData);
-
-                    //创建的消息对象
-                    Message message=new Message();
-                    message.what=FLAG;
-                    handler.sendMessage(message);//将 Message对象发送出去
-
-                }catch (Exception ex){
-                    ex.printStackTrace();
-                }
-            }
-        }.start();
-    }
 
     /*接受子线程的消息通知*/
     private Handler handler=new Handler() {

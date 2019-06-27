@@ -19,6 +19,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 import android.widget.VideoView;
 
 import com.bumptech.glide.Glide;
@@ -338,9 +339,13 @@ public class VideoActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(!isAlreadStar) {
-                    addStar(true);
+                    isAlreadStar = true;
+                    isAdd = true;
+                    addStar();
                 }else{
-                    addStar(false);
+                    isAlreadStar = false;
+                    isAdd = false;
+                    addStar();
                 }
             }
         });
@@ -417,6 +422,7 @@ public class VideoActivity extends AppCompatActivity {
                         }
                     }
 
+                    Toast.makeText(VideoActivity.this , "点赞成功！",Toast.LENGTH_SHORT).show();
                     break;
                 case REMOVE_STAR_SUCCESS:
                     isAlreadStar = false;
@@ -431,6 +437,7 @@ public class VideoActivity extends AppCompatActivity {
                         }
                     }
 
+                    Toast.makeText(VideoActivity.this , "取消点赞成功！",Toast.LENGTH_SHORT).show();
                     break;
             }
         }
@@ -439,22 +446,22 @@ public class VideoActivity extends AppCompatActivity {
     /**
      * 向后台发送增加点赞数量的请求
      */
-    public void addStar(boolean flag){
-        isAdd = flag;
+    public void addStar(){
+//        isAdd = flag;
         new Thread() {
             @Override
             public void run() {
                 try {
                     OkHttpClient client = new OkHttpClient();
-                    Request request = new Request.Builder().url("http://139.159.133.43:8080/video/addStar?id="+currentVideoId+"&isAdd="+isAdd).build();
+                    Request request = new Request.Builder().url("http://139.159.133.43:8080/video/star?id="+currentVideoId+"&isAdd="+isAdd).build();
                     Response response = client.newCall(request).execute();
                     String responseData = response.body().string();
                     Log.e("currentVideoId",currentVideoId+"");
                     Log.e("responseData",responseData);
 
-                    if("true".equals(responseData)){
+                    if("1".equals(responseData) || "2".equals(responseData)){
 
-                        /*后端点赞成功后发送信息*/
+                        /*后端点赞或者取消点赞成功后发送信息*/
                         Message message = new Message();
                         if(isAdd) {
                             message.what = ADD_STAR_SUCCESS;
