@@ -17,7 +17,9 @@ import android.content.pm.PackageManager;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Environment;
+import android.os.Handler;
 import android.os.IBinder;
+import android.os.Message;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -45,6 +47,13 @@ import com.juhe.weather.swiperefresh.PullToRefreshBase;
 import com.juhe.weather.swiperefresh.PullToRefreshBase.OnRefreshListener;
 import com.juhe.weather.swiperefresh.PullToRefreshScrollView;
 
+import org.json.JSONArray;
+import org.json.JSONObject;
+
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.Response;
+
 public class WeatherActivity extends Activity implements Serializable {
 
     private Context mContext;
@@ -55,6 +64,8 @@ public class WeatherActivity extends Activity implements Serializable {
     private int backgroundIndex = 0;
     /*背景图列表*/
     private List<Integer> backgroundList = new ArrayList<>();
+    /*背景名字的列表*/
+    private List<String> backgroundStrList = new ArrayList<>();
 
     private ImageView im_play_front;
     private ImageView im_play_next;
@@ -130,11 +141,16 @@ public class WeatherActivity extends Activity implements Serializable {
         mContext = this;
         init();
         initService();
-        findIdByReflect();
+
+        //从后台获得数据
+        getBackgroundData();
+
+
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout02);
         NavigationView navView=(NavigationView) findViewById(R.id.nav_view02);
 
         View headerView = navView.inflateHeaderView(R.layout.nav_header);
+
         /*获得背景音乐的控制按钮*/
         im_play_front = headerView.findViewById(R.id.play_left);
         im_play_play = headerView.findViewById(R.id.play_play);
@@ -149,6 +165,8 @@ public class WeatherActivity extends Activity implements Serializable {
 
                 switch (item.getItemId()){
                     case R.id.nav_changBackground:
+                        //当已经加载到最后一张的时候，需要重新加载，就让backgroundIndex指向负一，
+                        //因为下面会对backgroundIndex++
                         if (backgroundIndex+1 >= backgroundList.size()) {
                             backgroundIndex = -1;
                         }
@@ -332,7 +350,8 @@ public class WeatherActivity extends Activity implements Serializable {
         tv_temp_b.setText(temp_str_b + "°");
 
     }
-//初始化的方法，
+
+    //初始化的方法，
     private void init() {
         //下拉属性
         mPullToRefreshScrollView = (PullToRefreshScrollView) findViewById(R.id.pull_refresh_scrollview);
@@ -470,22 +489,91 @@ public class WeatherActivity extends Activity implements Serializable {
     }
 
 
+
+    /**************************************背景图片代码***************************************/
+    private final int BACKGROUND_SUCCESS = 1;
+    /**
+     *请求后端新闻数据
+     */
+    public void  getBackgroundData(){
+        //创建子线程请求数据
+        new Thread() {
+            @Override
+            public void run() {
+                try {
+                    //发起请求
+                    OkHttpClient client = new OkHttpClient();
+                    Request request = new Request.Builder().url("http://139.159.133.43:8080/background/findAll").build();
+                    Response response = client.newCall(request).execute();
+                    //得到一个json格式的字符串
+                    String responseData = response.body().string();
+
+                    //转成json数组对象
+                    JSONObject jsonObject = new JSONObject(responseData);
+
+                    parseBackground(jsonObject);
+
+
+                }catch (Exception ex){
+                    ex.printStackTrace();
+                }
+            }
+        }.start();
+    }
+
+    /**
+     * 解析后端返回的背景列表的json对象
+     * @param jsonObject
+     * @throws Exception
+     */
+    public void parseBackground(JSONObject jsonObject) throws Exception{
+        if("200".equals(jsonObject.getString("status"))){
+            JSONArray data = jsonObject.getJSONArray("data");
+
+            for (int i = 0; i < data.length(); i++) {
+                backgroundStrList.add(data.getJSONObject(i).getString("backgroundUrl"));
+            }
+
+            //创建的消息对象
+            Message message=new Message();
+            message.what=BACKGROUND_SUCCESS;
+            backgroundHandler.sendMessage(message);//将 Message对象发送出去
+        }
+    }
+
+    /*接受获取背景图片子线程的消息通知*/
+    private Handler backgroundHandler=new Handler() {
+        public void handleMessage(Message msg) {
+            switch (msg.what) {
+                case BACKGROUND_SUCCESS:
+                    //根据文件名查询图片资源的id
+                    findIdByReflect();
+                    break;
+                default:
+                    break;
+            }
+
+        }
+    };
+
+
     /**
      * 通过反射机制获得所有背景图的id
      * @return
      */
     public void findIdByReflect(){
-        Field[] fields = R.drawable.class.getFields();
+        //获得drawable类的字节码
+        Class<R.drawable> drawableClass = R.drawable.class;
 
-        for(Field field : fields){
-            Log.e("是否包含",(field.getName().indexOf("weather_background_") >= 0)+"");
-            if(field.getName().indexOf("weather") >= 0){
-                try {
-                    backgroundList.add(field.getInt(null));
-                } catch (IllegalAccessException e) {
-                    e.printStackTrace();
-                }
+        for(String str : backgroundStrList){
+            Field field = null;
+            try {
+                field = drawableClass.getField(str);
+                backgroundList.add(field.getInt(null));
+            } catch (Exception e) {
+                e.printStackTrace();
             }
+
         }
     }
 
@@ -511,8 +599,8 @@ public class WeatherActivity extends Activity implements Serializable {
             @Override
             public void onCompletion(MediaPlayer mp) {
                 mp.reset();
-                if(musicIndex < musicPathArr.length-1){
-                    musicIndex++;
+                if(musicIndex >= musicPathArr.length-1){
+                    musicIndex = 0;
                 }
                 initMediaPlayer();
             }

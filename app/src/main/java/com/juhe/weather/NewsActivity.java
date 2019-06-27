@@ -41,29 +41,20 @@ public class NewsActivity extends AppCompatActivity {
 
     public static final int FLAG = 1;
     private DrawerLayout mDrawerLayout;
+    //当前页数
     private int pageNum = 1;
+    //当前新闻类型
     private String type="头条";
     private JSONArray jsonArray;
+    //新闻列表
     private List<NewsBean> newList = new ArrayList<>();
+    //新闻适配器
     private NewsAdapter newsAdapter;
     //下拉刷新布局对象
     private SwipeRefreshLayout swipeRefresh ;
 
 
-    /*接受子线程的消息通知*/
-    private Handler handler=new Handler() {
-        public void handleMessage(Message msg) {
-            switch (msg.what) {
-                case FLAG:
-                    parseNews();
-                    initNews();
-                    break;
-                default:
-                    break;
-            }
 
-        }
-    };
 //
 
     @Override
@@ -73,6 +64,7 @@ public class NewsActivity extends AppCompatActivity {
 
         //设置Toolbar
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        //把toolbar设置顶部
         setSupportActionBar(toolbar);
 
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -83,6 +75,7 @@ public class NewsActivity extends AppCompatActivity {
             actionBar.setHomeAsUpIndicator(R.drawable.ic_menu);
         }
 
+        //监听功能菜单
         navView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener(){
             @Override
             public boolean onNavigationItemSelected(MenuItem item){
@@ -95,7 +88,6 @@ public class NewsActivity extends AppCompatActivity {
                         break;
 
                     case R.id.nav_vidoe:
-
                         startActivity(new Intent(NewsActivity.this , VideoActivity.class));
                         break;
 
@@ -103,38 +95,28 @@ public class NewsActivity extends AppCompatActivity {
                         break;
                 }
 
+                //关闭滑动菜单栏
                 mDrawerLayout.closeDrawers();
                 return true;
             }
         });
 
-        /*悬浮按钮的处理事件*/
-//        FloatingActionButton fab=(FloatingActionButton) findViewById(R.id.fab);
-//        fab.setOnClickListener(new View. OnClickListener(){
-//             @Override
-//             public void onClick(View v) {
-//                 Snackbar.make(v,"Data deleted", Snackbar. LENGTH_SHORT)
-//                         . setAction("Undo", new View. OnClickListener(){
-//                             @Override
-//                             public void onClick(View v) {
-//                                 Toast.makeText(NewsActivity.this, "Data restored", Toast.LENGTH_SHORT).show();
-//                             }
-//                         }).show();
-//             }
-//        });
-
 
         swipeRefresh=(SwipeRefreshLayout)findViewById(R. id. swipe_refresh);
         swipeRefresh.setColorSchemeResources(R.color.colorPrimary);
+
+        //监听下拉刷新
         swipeRefresh.setOnRefreshListener(new SwipeRefreshLayout.
                 OnRefreshListener(){
             @Override
             public void onRefresh(){
+                //刷新新闻
                 refreshNews();
             }
         });
 
-        getNewDate();
+        //从后台请求新闻数据
+        getNewsDate();
     }
 
 
@@ -155,7 +137,7 @@ public class NewsActivity extends AppCompatActivity {
                     public void run(){
 //                        initNews();
                         pageNum++;
-                        getNewDate();
+                        getNewsDate();
                         newsAdapter.notifyDataSetChanged();
                         swipeRefresh.setRefreshing(false);
                     }
@@ -170,25 +152,74 @@ public class NewsActivity extends AppCompatActivity {
      */
     private void initNews() {
 //        newList.clear();
+
         for (int i = 0; i < 50; i++) {
             Random random = new Random();
-            int index = random.nextInt(newList.size());
+            random.nextInt(newList.size());
         }
 
         RecyclerView recyclerView=(RecyclerView)findViewById(R.id.recycler_view);
         GridLayoutManager layoutManager=new GridLayoutManager(NewsActivity.this,1);
         recyclerView.setLayoutManager(layoutManager);
+
+        //新建一个新闻适配器
         newsAdapter = new NewsAdapter(newList);
+        //newsAdapter作为recyclerView的适配器
         recyclerView.setAdapter(this.newsAdapter);
-//        ListView newslistView = (ListView) findViewById(R.id.news_list_view);
-//        newsAdapter=new NewsAdapter(NewsActivity.this , R.layout.item_news_list , newList);
-//        newslistView.setAdapter(newsAdapter);
     }
 
     /**
      *请求后端新闻数据
      */
-    public void  getNewDate(){
+    public void  getNewsDate(){
+        //创建子线程请求数据
+        new Thread() {
+            @Override
+            public void run() {
+                try {
+                    //发起请求
+                    OkHttpClient client = new OkHttpClient();
+                    Request request = new Request.Builder().url("http://139.159.133.43:8080/news/getNewsByType?pageNum=" + pageNum + "&type=" + type).build();
+                    Response response = client.newCall(request).execute();
+                    //得到一个json格式的字符串
+                    String responseData = response.body().string();
+
+                    //转成json数组对象
+                    jsonArray = new JSONArray(responseData);
+
+                    //创建的消息对象
+                    Message message=new Message();
+                    message.what=FLAG;
+                    handler.sendMessage(message);//将 Message对象发送出去
+
+                }catch (Exception ex){
+                    ex.printStackTrace();
+                }
+            }
+        }.start();
+    }
+
+    /*接受子线程的消息通知*/
+    private Handler handler=new Handler() {
+        public void handleMessage(Message msg) {
+            switch (msg.what) {
+                case FLAG:
+                    //解析新闻
+                    parseNews();
+                    //初始化新闻页面
+                    initNews();
+                    break;
+                default:
+                    break;
+            }
+
+        }
+    };
+
+    /**
+     *请求后端新闻数据
+     */
+    public void  getNewData(){
         new Thread() {
             @Override
             public void run() {
@@ -210,18 +241,21 @@ public class NewsActivity extends AppCompatActivity {
             }
         }.start();
     }
-
-
+    
     /**
      *解析新闻json数据，封装到newsList列表中
      */
     public void parseNews(){
-
+        //遍历json数组
         for (int i = 0; i < jsonArray.length() ; i++) {
+            //NewsBean新闻的实体类
             NewsBean bean = new NewsBean();
+            //json对象
             JSONObject jsonObject = null;
             try {
+                //把json数组中的下标为i的json对象赋值给jsonObject
                 jsonObject = jsonArray.getJSONObject(i);
+                //从json对象中获取key为date的值，赋值给bean的date属性
                 bean.setDate(jsonObject.getString("date"));
                 bean.setTitle(jsonObject.getString("title"));
                 bean.setThumbnailPicS(jsonObject.getString("thumbnailPicS"));
@@ -259,62 +293,62 @@ public class NewsActivity extends AppCompatActivity {
                 type="头条";
                 pageNum=1;
                 newList = new ArrayList<>();
-                getNewDate();
+                getNewData();
                 break;
             case R.id.shehui:
                 type="社会";
                 pageNum=1;
                 newList = new ArrayList<>();
-                getNewDate();
+                getNewData();
 
                 break;
             case R.id.guonei:
                 type="国内";
                 pageNum=1;
                 newList = new ArrayList<>();
-                getNewDate();
+                getNewData();
                 break;
             case R.id.guoji:
                 type="国际";
                 pageNum=1;
                 newList = new ArrayList<>();
-                getNewDate();
+                getNewData();
                 break;
             case R.id.yule:
                 type="娱乐";
                 pageNum=1;
                 newList = new ArrayList<>();
-                getNewDate();
+                getNewData();
                 break;
             case R.id.tiyu:
                 type="体育";
                 pageNum=1;
                 newList = new ArrayList<>();
-                getNewDate();
+                getNewData();
                 break;
             case R.id.junshi:
                 type="军事";
                 pageNum=1;
                 newList = new ArrayList<>();
-                getNewDate();
+                getNewData();
                 break;
             case R.id.keji:
                 type="科技";
                 pageNum=1;
                 newList = new ArrayList<>();
-                getNewDate();
+                getNewData();
                 break;
             case R.id.caijing:
                 type="财经";
                 pageNum=1;
                 newList = new ArrayList<>();
-                getNewDate();
+                getNewData();
                 break;
             case R.id.shishang:
                 type="时尚";
                 pageNum=1;
                 newList = new ArrayList<>();
-                getNewDate();
+                getNewData();
                 break;
 
             default:

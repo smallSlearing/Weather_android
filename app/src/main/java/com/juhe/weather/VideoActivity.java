@@ -47,8 +47,13 @@ public class VideoActivity extends AppCompatActivity {
     private boolean isAlreadStar = false;
     //被点赞视频的id
     private int currentVideoId = -1;
-    //后台点赞成功
+    //后台操作点赞成功
     private final int ADD_STAR_SUCCESS = 1;
+    //后台操作取消点赞成功
+    private final int REMOVE_STAR_SUCCESS = 2;
+    //标记是点赞或者是取消点赞的标志，true  为点赞   false  取消点赞
+    private boolean  isAdd = true;
+
     private MyAdapter mAdapter;
     //点赞按钮的图片对象
     private ImageView starIV = null;
@@ -170,12 +175,12 @@ public class VideoActivity extends AppCompatActivity {
         }
     }
 
-    /**
-     * 把点赞的请求发送给后台
-     */
-    public void sendAddStar(int id){
-
-    }
+//    /**
+//     * 把点赞的请求发送给后台
+//     */
+//    public void sendAddStar(int id){
+//
+//    }
 
     /**
      * 给返回按钮设置监听器
@@ -332,8 +337,10 @@ public class VideoActivity extends AppCompatActivity {
         starIV.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(!isAlreadStar){
-                    addStar();
+                if(!isAlreadStar) {
+                    addStar(true);
+                }else{
+                    addStar(false);
                 }
             }
         });
@@ -395,9 +402,9 @@ public class VideoActivity extends AppCompatActivity {
         @Override
         public void handleMessage(Message msg) {
             switch(msg.what){
-                /*后端点赞成功，执行前端页面的数据的刷新*/
+                /*点赞或者取消点赞成功，执行前端页面的数据的刷新*/
                 case ADD_STAR_SUCCESS:
-                    Log.e("addStarHandler","进入addStarHandler");
+//                    Log.e("addStarHandler","进入addStarHandler");
                     isAlreadStar = true;
                     //换成红色
                     starIV.setImageResource(R.mipmap.icon_alrea_star);
@@ -409,6 +416,22 @@ public class VideoActivity extends AppCompatActivity {
                             v.setStar(v.getStar()+1);
                         }
                     }
+
+                    break;
+                case REMOVE_STAR_SUCCESS:
+                    isAlreadStar = false;
+                    //换成白色
+                    starIV.setImageResource(R.mipmap.heart_icon);
+                    oldValue = Integer.parseInt(starCountTV.getText().toString());
+                    Log.e("oldValue","oldValue");
+                    starCountTV.setText(oldValue-1+"");
+                    for(Video v: videoList){
+                        if(currentVideoId == v.getId()){
+                            v.setStar(v.getStar()-1);
+                        }
+                    }
+
+                    break;
             }
         }
     };
@@ -416,13 +439,14 @@ public class VideoActivity extends AppCompatActivity {
     /**
      * 向后台发送增加点赞数量的请求
      */
-    public void addStar(){
+    public void addStar(boolean flag){
+        isAdd = flag;
         new Thread() {
             @Override
             public void run() {
                 try {
                     OkHttpClient client = new OkHttpClient();
-                    Request request = new Request.Builder().url("http://139.159.133.43:8080/video/addStar?id="+currentVideoId).build();
+                    Request request = new Request.Builder().url("http://139.159.133.43:8080/video/addStar?id="+currentVideoId+"&isAdd="+isAdd).build();
                     Response response = client.newCall(request).execute();
                     String responseData = response.body().string();
                     Log.e("currentVideoId",currentVideoId+"");
@@ -432,7 +456,11 @@ public class VideoActivity extends AppCompatActivity {
 
                         /*后端点赞成功后发送信息*/
                         Message message = new Message();
-                        message.what=ADD_STAR_SUCCESS;
+                        if(isAdd) {
+                            message.what = ADD_STAR_SUCCESS;
+                        }else{
+                            message.what = REMOVE_STAR_SUCCESS;
+                        }
                         addStarHandler.sendMessage(message);
                     }
 

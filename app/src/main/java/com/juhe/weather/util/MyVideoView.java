@@ -4,6 +4,9 @@ import android.content.Context;
 import android.util.AttributeSet;
 import android.widget.VideoView;
 
+/**
+ *VideoView的子类
+ */
 public class MyVideoView extends VideoView {
     public MyVideoView(Context context) {
         super(context);
